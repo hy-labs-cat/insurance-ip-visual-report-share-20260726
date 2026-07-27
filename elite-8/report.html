@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8个标杆IP内部版式与视频风格拆解</title>
+<style>
+:root{--ink:#171918;--muted:#636966;--line:#dce0dc;--paper:#f7f8f5;--white:#fff;--yellow:#f4c942;--teal:#1d7f78;--coral:#c84c3f;--soft:#eef1ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;letter-spacing:0;line-height:1.65}a{color:inherit}img,video{display:block;max-width:100%}
+.top{background:var(--ink);color:#fff;padding:44px max(24px,calc((100vw - 1380px)/2)) 34px;border-bottom:6px solid var(--yellow)}.top .eyebrow{margin:0 0 12px;color:var(--yellow);font-weight:800;font-size:13px}.top h1{max-width:930px;margin:0;font-size:clamp(34px,5vw,68px);line-height:1.08}.top .lede{max-width:880px;margin:18px 0 0;color:#cfd4d1;font-size:17px}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:30px;background:#414542;border:1px solid #414542}.summary div{background:#222523;padding:16px 18px}.summary b{display:block;color:#fff;font-size:27px}.summary span{color:#aeb5b1;font-size:13px}
+.nav{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow:auto;padding:10px max(18px,calc((100vw - 1380px)/2));background:rgba(247,248,245,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav a{flex:0 0 auto;text-decoration:none;padding:7px 10px;border-bottom:2px solid transparent;font-size:13px;font-weight:700}.nav a:hover{border-color:var(--teal);color:var(--teal)}
+.method,.account{max-width:1380px;margin:0 auto;padding:58px 24px}.method{display:grid;grid-template-columns:1.1fr 1fr;gap:60px}.method h2{font-size:30px;margin:0 0 12px}.method p{margin:0;color:var(--muted)}.rules{display:grid;gap:10px}.rules div{display:grid;grid-template-columns:88px 1fr;gap:14px;border-top:1px solid var(--line);padding-top:10px}.rules b{font-size:13px;color:var(--teal)}.rules span{font-size:14px;color:var(--muted)}
+.account{border-top:1px solid var(--line);scroll-margin-top:64px}.account:nth-of-type(even){background:#fff;max-width:none;padding-left:max(24px,calc((100vw - 1380px)/2));padding-right:max(24px,calc((100vw - 1380px)/2))}.account-heading{display:flex;justify-content:space-between;gap:24px;align-items:flex-end}.account-heading>div:first-child{display:grid;grid-template-columns:auto auto;align-items:center;gap:8px 12px}.account-heading h2{grid-column:1/-1;margin:0;font-size:38px;line-height:1.18}.index{display:inline-grid;place-items:center;width:36px;height:30px;background:var(--ink);color:#fff;font-weight:900}.lane{font-size:13px;font-weight:800;color:var(--teal)}.metrics{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}.metrics span{padding:8px 10px;background:var(--soft);font-size:12px;color:var(--muted)}.metrics b{color:var(--ink);font-size:16px}.verdict{max-width:900px;margin:16px 0 28px;font-size:20px;font-weight:700}.account-layout{display:grid;grid-template-columns:minmax(320px,38%) 1fr;gap:34px;align-items:start}.sheet{margin:0;position:sticky;top:66px}.sheet img{width:100%;border:1px solid var(--line);background:#fff}.sheet figcaption{padding-top:8px;color:var(--muted);font-size:12px}.styles{border-top:1px solid var(--ink)}
+.style-block{padding:24px 0 30px;border-bottom:1px solid var(--line)}.style-title{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.style-title>div{display:flex;gap:12px;align-items:center}.style-title h3{margin:0;font-size:23px}.style-title>strong{font-size:14px;color:var(--muted)}.status{padding:3px 7px;background:var(--teal);color:#fff;font-size:11px;font-weight:800;white-space:nowrap}.experiment .status{background:var(--coral)}.style-block dl{margin:18px 0 0}.style-block dl>div{display:grid;grid-template-columns:94px 1fr;gap:16px;padding:9px 0;border-top:1px solid #ecefeb}.style-block dt{font-size:12px;font-weight:800;color:var(--muted)}.style-block dd{margin:0;font-size:14px}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}.video-card{min-width:0;border:1px solid var(--line);background:#fff;padding:8px}.video-card video{width:100%;aspect-ratio:9/16;object-fit:contain;background:#111}.video-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:9px;font-size:12px}.video-meta>div{min-width:0}.video-meta strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.video-meta span{color:var(--muted)}.video-meta .kicker{color:var(--teal);font-weight:900}.video-card a{display:inline-block;margin-top:7px;font-size:12px;font-weight:800;color:var(--teal);text-decoration:none}.video-card a:hover{text-decoration:underline}
+.footer{padding:34px 24px;background:var(--ink);color:#aeb5b1;text-align:center;font-size:12px}.footer b{color:#fff}
+@media(max-width:900px){.summary{grid-template-columns:repeat(2,1fr)}.method{grid-template-columns:1fr;gap:28px}.account-heading{align-items:flex-start;flex-direction:column}.metrics{justify-content:flex-start}.account-layout{grid-template-columns:1fr}.sheet{position:static}.style-block dl>div{grid-template-columns:1fr;gap:2px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.top{padding-top:30px}.top h1{font-size:36px}.top .lede{font-size:15px}.method,.account{padding:38px 16px}.account:nth-of-type(even){padding-left:16px;padding-right:16px}.account-heading h2{font-size:29px}.verdict{font-size:17px}.style-title{align-items:flex-start}.style-title>div{align-items:flex-start;flex-direction:column;gap:7px}.style-title h3{font-size:20px}.video-grid{grid-template-columns:1fr}.rules div{grid-template-columns:72px 1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <p class="eyebrow">DOUYIN VISUAL SYSTEM STUDY · 2026.07.24</p>
+  <h1>8个标杆IP内部版式与视频风格拆解</h1>
+  <p class="lede">只研究灯光、人物位置、标题字体、字幕动效、插图/插视频和剪辑。内容观点、产品与销售转化全部排除。</p>
+  <div class="summary"><div><b>8</b><span>指定个人IP</span></div><div><b>239</b><span>最近作品样本</span></div><div><b>25</b><span>已下载代表视频</span></div><div><b>16</b><span>稳定制作变体</span></div></div>
+</header>
+<nav class="nav"><a href="#chen-jiayi">有毒有料陈葭怡</a><a href="#wei-yi-lao-zhou">微易老周</a><a href="#huang-yong-ao">财商-黄永鳌</a><a href="#huang-jia-xiang">年金一哥 | 黄嘉祥</a><a href="#xie-yuan-wai">谢员外观世界</a><a href="#dong-ke-ren">董可人</a><a href="#gang-quan-lina">🇭🇰港圈Lina姐</a><a href="#zhi-ning-shuo">芷柠说</a></nav>
+<main>
+  <section class="method"><div><h2>这次怎么判定“一个版式”</h2><p>先看每个账号最近 30 条封面，再用代表视频验证动态字幕、B-roll 和剪辑。数据表现与视觉质量分开记录，不再用一条高赞视频代表整个账号。</p></div><div class="rules"><div><b>稳定版式</b><span>最近样本中至少重复 3 次。</span></div><div><b>制作变体</b><span>标题/字幕母版相同，只改变灯光、背景、服装或景别。</span></div><div><b>独立母版</b><span>场景、构图、标题系统、字幕和剪辑至少三项同步变化。</span></div><div><b>实验版</b><span>不足 3 次，保留观察但不纳入稳定体系。</span></div></div></section>
+  <section class="account" id="chen-jiayi">
+    <div class="account-heading">
+      <div><span class="index">01</span><span class="lane">保险职业IP</span><h2>有毒有料陈葭怡</h2></div>
+      <div class="metrics"><span><b>3.4万</b> 粉丝</span><span><b>11万</b> 获赞</span><span><b>3</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">同一标题母版，分化出 3 套稳定灯光场景；动效强度随场景变化。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/chen-jiayi.jpg" alt="有毒有料陈葭怡 最近作品封面联系表" loading="lazy"><figcaption>最近 29 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>深色幕布暖侧光</h3></div><strong>15 / 29</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>黑色幕布、红皮椅、暖侧光，中近景居中或轻偏侧。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部白黄粗黑体常驻；底部语义块字幕，白黄高亮并带黑描边。</dd></div>
+      <div><dt>动效与插入</dt><dd>字幕以硬切为主，少量弹入、上滑和闪光；主样本无 B-roll，约 7.5–12.7 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/chen-jiayi/01-7663448309306019107.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>深色幕布暖侧光</strong></div>
+      <span>160s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663448309306019107/?region=US&amp;mid=7663448379611040558&amp;u_code=0&amp;did=MS4wLjABAAAAK-rQtVXUdasUk1WnTCvH1iaCIWn2fCyeimTDCxjND9HftiSHqaCNv8CoPA044EhP&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=hve6Hq8pBnArEjhoOmQ3ddsBry7YwH3iBCwzU5p.ipQ-&amp;share_version=290100&amp;ts=1784875338&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/chen-jiayi/06-7660837513094761754.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#06</span><strong>深色幕布暖侧光</strong></div>
+      <span>90s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7660837513094761754/?region=US&amp;mid=7660837481008384778&amp;u_code=0&amp;did=MS4wLjABAAAAK-rQtVXUdasUk1WnTCvH1iaCIWn2fCyeimTDCxjND9HftiSHqaCNv8CoPA044EhP&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=DOHCWyCvBoyk54EZUGiJPomBA8rOJiVU3Wn_.DuMBQE-&amp;share_version=290100&amp;ts=1784875338&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>暖色家居漫射光</h3></div><strong>11 / 29</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖灯、浅色家居和更明显的背景景深，人物仍保持固定中景。</dd></div>
+      <div><dt>标题与字幕</dt><dd>沿用同一顶部标题和底部字幕系统，靠服装、手势和暖色背景换气质。</dd></div>
+      <div><dt>动效与插入</dt><dd>关键词图标弹入、三条要点上滑、星芒与气泡强调；样本出现约 12 次图形插入。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/chen-jiayi/03-7662697694120512811.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#03</span><strong>暖色家居漫射光</strong></div>
+      <span>127s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662697694120512811/?region=US&amp;mid=7662697700395158313&amp;u_code=0&amp;did=MS4wLjABAAAAK-rQtVXUdasUk1WnTCvH1iaCIWn2fCyeimTDCxjND9HftiSHqaCNv8CoPA044EhP&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=iyhdaYslea.kHBhRdjOwlCZdHg8PKpTNt4IPm9t7x2Q-&amp;share_version=290100&amp;ts=1784875338&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>蓝灰窗景冷调光</h3></div><strong>3 / 29</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>蓝灰窗景、冷调漫射光，人物与暖色版保持相同构图。</dd></div>
+      <div><dt>标题与字幕</dt><dd>标题系统不变，字幕加入彩块、箭头、爆炸框与双色强调。</dd></div>
+      <div><dt>动效与插入</dt><dd>硬切字幕更密，出现竖屏插视频、彩块拼接与局部数码放大，约 12.2 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/chen-jiayi/18-7654875719478152454.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#18</span><strong>蓝灰窗景冷调光</strong></div>
+      <span>88s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7654875719478152454/?region=US&amp;mid=7654875940178447150&amp;u_code=0&amp;did=MS4wLjABAAAAK-rQtVXUdasUk1WnTCvH1iaCIWn2fCyeimTDCxjND9HftiSHqaCNv8CoPA044EhP&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=XcMjR2D2D20UKWOKinTZ5yOSUHQ6HRiDtfYgiJpR2uM-&amp;share_version=290100&amp;ts=1784875338&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="wei-yi-lao-zhou">
+    <div class="account-heading">
+      <div><span class="index">02</span><span class="lane">保险职业IP</span><h2>微易老周</h2></div>
+      <div class="metrics"><span><b>1.6万</b> 粉丝</span><span><b>13.6万</b> 获赞</span><span><b>2</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">两套真正独立的母版并行：舞台负责势能，坐谈负责解释。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/wei-yi-lao-zhou.jpg" alt="微易老周 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>红幕舞台脱口秀</h3></div><strong>15 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>红幕、追光、立姿持麦，中近景与全身景交替。</dd></div>
+      <div><dt>标题与字幕</dt><dd>左上栏目名常驻，底部黄白大字按整句更换。</dd></div>
+      <div><dt>动效与插入</dt><dd>全硬切；每 15–20 秒插观众笑场/鼓掌反应，约 10–12 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/wei-yi-lao-zhou/01-7663434233856712430.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>红幕舞台脱口秀</strong></div>
+      <span>60s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663434233856712430/?region=US&amp;mid=6872042114608269326&amp;u_code=0&amp;did=MS4wLjABAAAAWsseQh9sagnhKIedi0PrKlR3J3cxKVt7ftLlfRc-jzh7bdp8xpgwxEBS7zrJrOaB&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=1rrvkn_Ivvk5gSdq1J8vcqIm91.le_zN9.K1DJSeCHg-&amp;share_version=290100&amp;ts=1784875342&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/wei-yi-lao-zhou/03-7662622157733947635.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#03</span><strong>红幕舞台脱口秀</strong></div>
+      <span>45s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662622157733947635/?region=US&amp;mid=6872042114608269326&amp;u_code=0&amp;did=MS4wLjABAAAAWsseQh9sagnhKIedi0PrKlR3J3cxKVt7ftLlfRc-jzh7bdp8xpgwxEBS7zrJrOaB&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CF9ghdQk.Y8Xr93_sQsKZpHBf2tvQlX3VIw2r7kkPwY-&amp;share_version=290100&amp;ts=1784875342&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>室内坐谈口播</h3></div><strong>15 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖调三点布光，人物坐于扶手椅，书架、窗帘与植物形成层次。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部两行白金标题常驻，底部小号白字整句字幕。</dd></div>
+      <div><dt>动效与插入</dt><dd>基本一镜到底，字幕静止后硬切替换；无 B-roll、无转场、无数码推近。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/wei-yi-lao-zhou/02-7663432988274260681.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#02</span><strong>室内坐谈口播</strong></div>
+      <span>103s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663432988274260681/?region=US&amp;mid=7663432978701568811&amp;u_code=0&amp;did=MS4wLjABAAAAWsseQh9sagnhKIedi0PrKlR3J3cxKVt7ftLlfRc-jzh7bdp8xpgwxEBS7zrJrOaB&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=vkxsT9sUJPHvsnKHn.u3Jl6XSrhKMmFXY2PM2RnNtI8-&amp;share_version=290100&amp;ts=1784875342&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="huang-yong-ao">
+    <div class="account-heading">
+      <div><span class="index">03</span><span class="lane">保险相关系列</span><h2>财商-黄永鳌</h2></div>
+      <div class="metrics"><span><b>4.1万</b> 粉丝</span><span><b>23.1万</b> 获赞</span><span><b>2</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">一套极稳定的暖色近景母版，正装与衬衫是两批制作变体。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/huang-yong-ao.jpg" alt="财商-黄永鳌 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>暖色商务正装口播</h3></div><strong>13 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖色家居虚化背景，人物穿西装居中，中近景固定机位。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部提问式白字黑描标题；底部白字配黄色重点词。</dd></div>
+      <div><dt>动效与插入</dt><dd>全程单镜头，字幕按停顿硬切；无 B-roll、无镜头运动。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-yong-ao/01-7662300536045145350.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>暖色商务正装口播</strong></div>
+      <span>14s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662300536045145350/?region=US&amp;mid=7662300519792544548&amp;u_code=0&amp;did=MS4wLjABAAAAj2l4GRGT-cL-b9snRsJ7lXUpEiHmn5U46iSPbRWca-AOiI8-cdtQzKTXh5dNPd6Q&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=6a8AebtPaABFV3p9zS2A8nxEwstoCugZxH0sn1lRypk-&amp;share_version=290100&amp;ts=1784875346&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-yong-ao/02-7662299415868165403.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#02</span><strong>暖色商务正装口播</strong></div>
+      <span>31s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662299415868165403/?region=US&amp;mid=7662299396230368051&amp;u_code=0&amp;did=MS4wLjABAAAAj2l4GRGT-cL-b9snRsJ7lXUpEiHmn5U46iSPbRWca-AOiI8-cdtQzKTXh5dNPd6Q&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=kdEkAs_TjcfMyNSNB_MNxMHX.FY.bfvuUt3_l4.L2ss-&amp;share_version=290100&amp;ts=1784875346&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>暖色衬衫近景口播</h3></div><strong>17 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>同一暖色浅景深体系，衬衫造型更日常，机位更近。</dd></div>
+      <div><dt>标题与字幕</dt><dd>标题与字幕规则完全继承正装版。</dd></div>
+      <div><dt>动效与插入</dt><dd>几乎一镜到底，仅字幕硬切；手势与重点词同步，不靠额外素材。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-yong-ao/14-7655954373557718282.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#14</span><strong>暖色衬衫近景口播</strong></div>
+      <span>53s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7655954373557718282/?region=US&amp;mid=7655954377517108018&amp;u_code=0&amp;did=MS4wLjABAAAAj2l4GRGT-cL-b9snRsJ7lXUpEiHmn5U46iSPbRWca-AOiI8-cdtQzKTXh5dNPd6Q&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=n.teMWdyiIAjBeGJIuzOnAFfv15JPeU_jaaI6LRT1Ds-&amp;share_version=290100&amp;ts=1784875346&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="huang-jia-xiang">
+    <div class="account-heading">
+      <div><span class="index">04</span><span class="lane">保险职业IP</span><h2>年金一哥 | 黄嘉祥</h2></div>
+      <div class="metrics"><span><b>1.9万</b> 粉丝</span><span><b>7.9万</b> 获赞</span><span><b>2</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">车内真实感与灰背景权威感两套母版，文字包装也随场景重做。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/huang-jia-xiang.jpg" alt="年金一哥 | 黄嘉祥 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>车内自然光近景</h3></div><strong>10 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>后排或驾驶位近景，自然侧光，人物偏左/偏右并保留车窗环境。</dd></div>
+      <div><dt>标题与字幕</dt><dd>半透明黑色中下栏，白字为主、黄色重点词，标题紧贴人物胸口区域。</dd></div>
+      <div><dt>动效与插入</dt><dd>字幕硬切与轻微缩放；出现撕纸展开、故障闪烁和一次金融 B-roll，约 3–6 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-jia-xiang/01-7497050416228601139.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>车内自然光近景</strong></div>
+      <span>72s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7497050416228601139/?region=US&amp;mid=7497050822090443571&amp;u_code=0&amp;did=MS4wLjABAAAAZ-55dr8j3NhPmdfKli5BlRCbHCuFFMlunlclQCVma8RnGByJMuiKjjOT7j821XnI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=iBmocsXn1i933moyBzNaooZQU.UyuIuAmSAfgFcrxcY-&amp;share_version=290100&amp;ts=1784875349&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-jia-xiang/02-7497049116606827827.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#02</span><strong>车内自然光近景</strong></div>
+      <span>42s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7497049116606827827/?region=US&amp;mid=7497049404818377508&amp;u_code=0&amp;did=MS4wLjABAAAAZ-55dr8j3NhPmdfKli5BlRCbHCuFFMlunlclQCVma8RnGByJMuiKjjOT7j821XnI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CLSN3qWr69roQ9CMYWNH6qLmhIDmsWXRdlc70JZuW8k-&amp;share_version=290100&amp;ts=1784875349&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>灰背景商务访谈</h3></div><strong>20 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>冷灰纯背景、正装领带、人物中景略偏侧，光线均匀克制。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部金色双行标题，底部黑底红白身份条，三段式构图固定。</dd></div>
+      <div><dt>动效与插入</dt><dd>标题和身份条常驻，基本一镜到底；几乎没有插图与转场。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/huang-jia-xiang/11-7449664198402936083.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#11</span><strong>灰背景商务访谈</strong></div>
+      <span>60s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7449664198402936083/?region=US&amp;mid=6943086088245004289&amp;u_code=0&amp;did=MS4wLjABAAAAZ-55dr8j3NhPmdfKli5BlRCbHCuFFMlunlclQCVma8RnGByJMuiKjjOT7j821XnI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=.80n1Dx5vSGfRbytXvlgGuDnjRGyXrcDUytVPhjcGEE-&amp;share_version=290100&amp;ts=1784875349&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="xie-yuan-wai">
+    <div class="account-heading">
+      <div><span class="index">05</span><span class="lane">跨赛道视觉参考</span><h2>谢员外观世界</h2></div>
+      <div class="metrics"><span><b>223.2万</b> 粉丝</span><span><b>1807.9万</b> 获赞</span><span><b>1</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">30 条近作几乎复用同一张杂志封面母版，统一度最高。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/xie-yuan-wai.jpg" alt="谢员外观世界 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>深蓝杂志封面卡</h3></div><strong>30 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>深蓝黑背景、硬侧光、中近景坐姿，人物凝视镜头。</dd></div>
+      <div><dt>标题与字幕</dt><dd>超大英文暗纹、栏目签名、黄色粗黑主标题和小号副标题组成杂志封面层级。</dd></div>
+      <div><dt>动效与插入</dt><dd>视频内固定机位，字幕在胸前按整句硬切；无 B-roll，约 0.7–1.1 次明显切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/xie-yuan-wai/01-7662706835920538916.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>深蓝杂志封面卡</strong></div>
+      <span>165s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662706835920538916/?region=US&amp;mid=7662706824709294858&amp;u_code=0&amp;did=MS4wLjABAAAAOUGM0EeoCVCVKmnfFC4MW6pV0ocm4UBpPVovE2zsIMzkSfN3wX3JOtx_eAehTgWS&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=B4hhjRH4h6XPD4bfGYtL1YsMcUJLyI065DVLpXxTerc-&amp;share_version=290100&amp;ts=1784875353&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/xie-yuan-wai/16-7652675025136389419.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#16</span><strong>深蓝杂志封面卡</strong></div>
+      <span>87s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7652675025136389419/?region=US&amp;mid=7652675332876651314&amp;u_code=0&amp;did=MS4wLjABAAAAOUGM0EeoCVCVKmnfFC4MW6pV0ocm4UBpPVovE2zsIMzkSfN3wX3JOtx_eAehTgWS&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=llBkwcnbx62XlQxC9yzXqDWMksAm3YBTNA5YC2Y8298-&amp;share_version=290100&amp;ts=1784875353&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="dong-ke-ren">
+    <div class="account-heading">
+      <div><span class="index">06</span><span class="lane">跨赛道视觉参考</span><h2>董可人</h2></div>
+      <div class="metrics"><span><b>49.7万</b> 粉丝</span><span><b>419.9万</b> 获赞</span><span><b>1</b> 稳定版式</span></div>
+    </div>
+    <p class="verdict">一套强识别的信息卡母版，靠中央黑带和白蓝大字完成系列化。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/dong-ke-ren.jpg" alt="董可人 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>上下分区黑底标题</h3></div><strong>30 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>明亮窗景虚化，人物居中偏上，蓝色短袖形成固定色块。</dd></div>
+      <div><dt>标题与字幕</dt><dd>画面中央横贯黑色标题带，白字为主、冰蓝重点词；左下小号身份信息常驻。</dd></div>
+      <div><dt>动效与插入</dt><dd>字幕逐句淡入或硬切，画面低剪辑、无 B-roll，约 2.5–3 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/dong-ke-ren/01-7663446126015548722.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>上下分区黑底标题</strong></div>
+      <span>20s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663446126015548722/?region=US&amp;mid=7663446040057924362&amp;u_code=0&amp;did=MS4wLjABAAAAG2PDOInPQacmjJq9fVhwI13J8vFnwwyKu5rPrD_uEe5wNhU08hqMf9W1lIufsuPF&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=Y_qsX9qJhbBx7fDiPvqwlKXEdfpvNXE28mqA78YX7UM-&amp;share_version=290100&amp;ts=1784875357&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/dong-ke-ren/16-7658129587141954857.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#16</span><strong>上下分区黑底标题</strong></div>
+      <span>24s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7658129587141954857/?region=US&amp;mid=7658129540723739419&amp;u_code=0&amp;did=MS4wLjABAAAAG2PDOInPQacmjJq9fVhwI13J8vFnwwyKu5rPrD_uEe5wNhU08hqMf9W1lIufsuPF&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=FijIvWwNHXyFZNGrafhyvew_ide3FpF3GbNLzFsaWxQ-&amp;share_version=290100&amp;ts=1784875357&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="gang-quan-lina">
+    <div class="account-heading">
+      <div><span class="index">07</span><span class="lane">保险职业IP</span><h2>🇭🇰港圈Lina姐</h2></div>
+      <div class="metrics"><span><b>5933</b> 粉丝</span><span><b>2.5万</b> 获赞</span><span><b>2</b> 稳定版式</span><span><b>2</b> 实验版</span></div>
+    </div>
+    <p class="verdict">明亮天际线是主母版，深色散景承担重信息；橙色棚拍仍在试验期。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/gang-quan-lina.jpg" alt="🇭🇰港圈Lina姐 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>香港天际线明亮口播</h3></div><strong>21 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>高楼窗景、明亮柔光、人物中景居中或轻偏侧，城市即身份背景。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部黑/白/黄标题，左下资质信息栏，中下部白黄字幕。</dd></div>
+      <div><dt>动效与插入</dt><dd>固定机位、字幕硬切、无 B-roll或极少，样本约 0–2.8 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/gang-quan-lina/01-7663469904137440554.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>香港天际线明亮口播</strong></div>
+      <span>21s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663469904137440554/?region=US&amp;mid=7663469995048979263&amp;u_code=0&amp;did=MS4wLjABAAAAaQKBXzURaJnH32UgSTKvIsKH9E88btDJsY9xGyJR3FkQZ-tdV87-ECyfVz6vY5kG&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=WmN1vtztLrm8rO8b.McbpGp2U0eFio4XlqHIftYZ3tM-&amp;share_version=290100&amp;ts=1784875361&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/gang-quan-lina/14-7648273069978488074.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#14</span><strong>香港天际线明亮口播</strong></div>
+      <span>13s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7648273069978488074/?region=US&amp;mid=7553857454338033703&amp;u_code=0&amp;did=MS4wLjABAAAAaQKBXzURaJnH32UgSTKvIsKH9E88btDJsY9xGyJR3FkQZ-tdV87-ECyfVz6vY5kG&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=f5FUA8mFMY83RKlWiiS9Hp.dHVlYrrPBPdWg1Rzc1tA-&amp;share_version=290100&amp;ts=1784875361&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>深色散景棚拍口播</h3></div><strong>6 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖色面光配深色散景，黑色服装与金色文字形成高对比。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部黄白标题常驻，底部白金字幕按整句替换。</dd></div>
+      <div><dt>动效与插入</dt><dd>约每 20–30 秒插活动照、数据图、香港城市或街景，全屏硬切；约 6.1 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/gang-quan-lina/02-7662282697527594280.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#02</span><strong>深色散景棚拍口播</strong></div>
+      <span>148s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662282697527594280/?region=US&amp;mid=7662282843904609033&amp;u_code=0&amp;did=MS4wLjABAAAAaQKBXzURaJnH32UgSTKvIsKH9E88btDJsY9xGyJR3FkQZ-tdV87-ECyfVz6vY5kG&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=Fbbi7zGhNOVa6qL6NpZxEMuPnYT9SBmlgMtPKGhNlvg-&amp;share_version=290100&amp;ts=1784875361&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block experiment">
+    <div class="style-title"><div><span class="status">实验版</span><h3>暖橙纯色棚拍</h3></div><strong>2 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖橙纯色背景与浅色服装，气质更柔和。</dd></div>
+      <div><dt>标题与字幕</dt><dd>左上标题与底部字幕并存，局部双语排版。</dd></div>
+      <div><dt>动效与插入</dt><dd>粒子闪入、上滑和硬切三种文字动效；约 5–6 段全屏 B-roll，尚未达到稳定复用阈值。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/gang-quan-lina/11-7650817897735998755.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#11</span><strong>暖橙纯色棚拍</strong></div>
+      <span>78s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7650817897735998755/?region=US&amp;mid=7650817948956756786&amp;u_code=0&amp;did=MS4wLjABAAAAaQKBXzURaJnH32UgSTKvIsKH9E88btDJsY9xGyJR3FkQZ-tdV87-ECyfVz6vY5kG&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=qGZRp.Ph9ufWT_yeSLTQ91_hFiMPEFM573AgrARFNeY-&amp;share_version=290100&amp;ts=1784875361&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block experiment">
+    <div class="style-title"><div><span class="status">实验版</span><h3>香港身份风景卡</h3></div><strong>1 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>全屏香港海港风景，无人物。</dd></div>
+      <div><dt>标题与字幕</dt><dd>中央金白两色大标题。</dd></div>
+      <div><dt>动效与插入</dt><dd>仅出现一次，先作为栏目过场实验，不计稳定母版。</dd></div>
+    </dl>
+    
+  </div></div>
+    </div>
+  </section>
+<section class="account" id="zhi-ning-shuo">
+    <div class="account-heading">
+      <div><span class="index">08</span><span class="lane">跨赛道视觉参考</span><h2>芷柠说</h2></div>
+      <div class="metrics"><span><b>16.7万</b> 粉丝</span><span><b>127.8万</b> 获赞</span><span><b>3</b> 稳定版式</span><span><b>1</b> 实验版</span></div>
+    </div>
+    <p class="verdict">三套成熟母版分别承载情绪、哲思与观点，场景和字幕动效同步变化。</p>
+    <div class="account-layout">
+      <figure class="sheet"><img src="contact-sheets/zhi-ning-shuo.jpg" alt="芷柠说 最近作品封面联系表" loading="lazy"><figcaption>最近 30 条，按从左到右、从上到下排列</figcaption></figure>
+      <div class="styles"><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>夜景窗边情绪访谈</h3></div><strong>15 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>深蓝夜景窗边，人物偏右，中近景留出左侧文字空间。</dd></div>
+      <div><dt>标题与字幕</dt><dd>细白字、低对比、留白大，标题和字幕常在左上/中部。</dd></div>
+      <div><dt>动效与插入</dt><dd>单镜头慢节奏，字幕静态出现后硬切，无 B-roll，约 0–2.1 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/zhi-ning-shuo/01-7663303161414716699.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#01</span><strong>夜景窗边情绪访谈</strong></div>
+      <span>28s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7663303161414716699/?region=US&amp;mid=7663303110223268659&amp;u_code=0&amp;did=MS4wLjABAAAAx8AfdN3anKQNDtk9HZu_dWhIghGVHP1rliu-2vf6xpPRmWuvGChwW3sy09VOzGIN&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=QRZjDM1S0J0ippvHocQyuotdDrNI.eX8zJFtqNPj3QA-&amp;share_version=290100&amp;ts=1784875364&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/zhi-ning-shuo/06-7661107907815099694.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#06</span><strong>夜景窗边情绪访谈</strong></div>
+      <span>19s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7661107907815099694/?region=US&amp;mid=7661107878345919295&amp;u_code=0&amp;did=MS4wLjABAAAAx8AfdN3anKQNDtk9HZu_dWhIghGVHP1rliu-2vf6xpPRmWuvGChwW3sy09VOzGIN&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=d4nyZ4z5nnnuMjF637N1CTpwzGIhBq2P3NhzAP7PWao-&amp;share_version=290100&amp;ts=1784875364&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>暖色东方室内访谈</h3></div><strong>9 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>暖木色屏风、器物和烛光，人物居中，柔光塑造东方质感。</dd></div>
+      <div><dt>标题与字幕</dt><dd>金色书法标题配白色轻字字幕。</dd></div>
+      <div><dt>动效与插入</dt><dd>字幕 0.3 秒淡入淡出；穿插山雾、星系、秋林等 1–2 秒意象 B-roll，约 15 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/zhi-ning-shuo/03-7662638103659679022.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#03</span><strong>暖色东方室内访谈</strong></div>
+      <span>28s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7662638103659679022/?region=US&amp;mid=7662638061615975211&amp;u_code=0&amp;did=MS4wLjABAAAAx8AfdN3anKQNDtk9HZu_dWhIghGVHP1rliu-2vf6xpPRmWuvGChwW3sy09VOzGIN&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=lzOBzUtLaDByFpsCxqaCipmKKHqarahaE8NqglpYmJU-&amp;share_version=290100&amp;ts=1784875364&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block stable">
+    <div class="style-title"><div><span class="status">稳定版式</span><h3>明亮灰蓝棚拍观点卡</h3></div><strong>5 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>灰蓝高调柔光、人物居中，左侧陈设与身份信息形成平衡。</dd></div>
+      <div><dt>标题与字幕</dt><dd>顶部固定双行标题，中部深灰/白描字幕，左侧竖向身份栏。</dd></div>
+      <div><dt>动效与插入</dt><dd>字幕整句硬切、无 B-roll，约 3.1 次切镜/分钟。</dd></div>
+    </dl>
+    <div class="video-grid"><article class="video-card">
+    <video controls preload="metadata" playsinline src="videos/zhi-ning-shuo/10-7660029317379902720.mp4"></video>
+    <div class="video-meta">
+      <div><span class="kicker">#10</span><strong>明亮灰蓝棚拍观点卡</strong></div>
+      <span>19s</span>
+    </div>
+    <a href="https://www.iesdouyin.com/share/video/7660029317379902720/?region=US&amp;mid=7660029314542029604&amp;u_code=0&amp;did=MS4wLjABAAAAx8AfdN3anKQNDtk9HZu_dWhIghGVHP1rliu-2vf6xpPRmWuvGChwW3sy09VOzGIN&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=BrvEnai_58s7mbDNiR6ocq.LHNY2RaUpcxYIv5xtaSk-&amp;share_version=290100&amp;ts=1784875364&amp;from_aid=6383&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D" target="_blank" rel="noreferrer">抖音原页 ↗</a>
+  </article></div>
+  </div><div class="style-block experiment">
+    <div class="style-title"><div><span class="status">实验版</span><h3>户外网球生活切片</h3></div><strong>1 / 30</strong></div>
+    <dl>
+      <div><dt>场景与人物</dt><dd>户外球场、全身动作与自然光。</dd></div>
+      <div><dt>标题与字幕</dt><dd>大号白字叠在人物周围。</dd></div>
+      <div><dt>动效与插入</dt><dd>仅出现一次，属于生活方式实验，不计稳定母版。</dd></div>
+    </dl>
+    
+  </div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><b>样本时间：2026-07-24</b> · 公开主页与公开视频的视觉研究，仅供版式学习与制作规划参考。</footer>
+</body>
+</html>

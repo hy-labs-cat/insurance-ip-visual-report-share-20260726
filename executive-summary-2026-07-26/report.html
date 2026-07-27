@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>保险个人IP视觉研究阶段总汇报</title>
+  <style>
+    :root{--paper:#f2f0e9;--white:#fff;--ink:#20231f;--muted:#666b63;--line:#d3d2ca;--gold:#9a7227;--gold-soft:#eee3ca;--red:#a34033;--red-soft:#f3ded9;--green:#2f6953;--green-soft:#dceae3;--blue:#3f6473;--blue-soft:#dce9ec;--charcoal:#272b27}
+    body{overflow-x:hidden}h1,h2,h3,p,li,blockquote{overflow-wrap:break-word}.hero-copy,.section-head>*,.formula>*{min-width:0}
+    .phase{display:block;color:inherit;cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}.phase:hover{transform:translateY(-3px);border-color:#9a7227;box-shadow:0 10px 24px rgba(32,35,31,.12)}.phase:focus-visible{outline:3px solid #9a7227;outline-offset:3px}.phase-link{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid #d3d2ca;color:#3f6473;font-size:12px;font-weight:800}.phase-link b{font-size:16px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0}img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.hero{position:relative;min-height:610px;overflow:hidden;background:#151713}.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:brightness(.43) saturate(.78)}.hero::after{content:"";position:absolute;inset:0;background:rgba(10,12,10,.25)}.hero-inner{position:relative;z-index:1;display:flex;min-height:610px;flex-direction:column;justify-content:space-between;padding:28px 0 52px;color:#fff}.hero-top{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:12px;font-size:12px}.hero-copy{max-width:890px}.eyebrow{margin:0 0 14px;color:#e1c98f;font-size:12px;font-weight:800}.hero h1{max-width:860px;margin:0;font-size:52px;line-height:1.12}.hero-lead{max-width:790px;margin:20px 0 0;font-size:19px;line-height:1.8;color:#f1efe9}.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hero-tags span{border:1px solid rgba(255,255,255,.5);border-radius:4px;padding:7px 9px;font-size:12px}.metrics{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line)}.metric{padding:22px 16px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric b{display:block;font-size:30px}.metric span{display:block;margin-top:5px;color:var(--muted);font-size:12px}.section{padding:70px 0 0}.section-head{display:grid;grid-template-columns:150px 1fr;gap:30px;margin-bottom:24px}.section-no{color:var(--gold);font-size:12px;font-weight:800}.section h2{margin:0;font-size:32px;line-height:1.25}.section-desc{max-width:790px;margin:10px 0 0;color:var(--muted);font-size:15px;line-height:1.8}.boss-line{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.speech{padding:30px;background:var(--white);border-top:4px solid var(--ink)}.speech small{color:var(--gold);font-weight:800}.speech blockquote{margin:16px 0 0;font-size:21px;line-height:1.85}.takeaways{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}.takeaway{background:#faf9f4;padding:19px}.takeaway b{display:block;margin-bottom:6px}.takeaway span{color:var(--muted);font-size:13px;line-height:1.65}.goal-band{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.goal-band>div{background:var(--white);padding:26px}.goal-band small{color:var(--gold);font-weight:800}.goal-band h3{margin:9px 0;font-size:23px}.goal-band p{margin:0;color:var(--muted);line-height:1.75}.goal-band .wrong{background:var(--red-soft)}.goal-band .right{background:var(--green-soft)}.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.phase{overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:6px}.phase-media{position:relative;background:#111}.phase-media img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:top}.phase-media b{position:absolute;top:10px;left:10px;background:#111;color:#fff;padding:5px 7px;font-size:11px}.phase-copy{padding:18px}.phase-copy small{color:var(--gold);font-weight:800}.phase-copy h3{margin:7px 0;font-size:19px}.phase-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.phase-copy strong{display:block;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}.truth{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.truth article{padding:22px;background:var(--white);border-left:4px solid var(--red)}.truth article:last-child{border-left-color:var(--green)}.truth h3{margin:0 0 9px}.truth p{margin:0;color:var(--muted);line-height:1.75}.method{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.method-step{min-height:170px;padding:18px;background:var(--white)}.method-step span{color:var(--gold);font-weight:850;font-size:12px}.method-step h3{margin:9px 0 7px;font-size:16px}.method-step p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.gate{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.gate div{padding:14px;background:var(--charcoal);color:#fff;border-radius:5px}.gate b{display:block;font-size:14px}.gate span{display:block;margin-top:4px;color:#c9ccc7;font-size:11px}.formula{padding:30px;background:var(--white);border-top:4px solid var(--ink);text-align:center}.formula p{margin:0;font-size:23px;line-height:1.6}.formula strong{color:var(--gold)}.archetypes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.archetype{overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:6px}.archetype img{width:100%;aspect-ratio:3/4;object-fit:cover}.archetype div{padding:14px}.archetype small{color:var(--gold);font-weight:800}.archetype h3{margin:6px 0;font-size:17px}.archetype p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.score-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:16px}.score-table{width:100%;border-collapse:collapse;background:var(--white)}.score-table th,.score-table td{padding:12px;border-bottom:1px solid var(--line);font-size:12px;text-align:left}.score-table th{background:#e7e5dc;color:#565b53}.score-table td:nth-child(2){font-weight:850;color:var(--gold)}.score-side{display:grid;gap:10px}.score-level{display:flex;align-items:center;justify-content:space-between;padding:18px;background:var(--white);border-left:4px solid var(--green)}.score-level:nth-child(2){border-left-color:var(--gold)}.score-level:nth-child(3){border-left-color:var(--red)}.score-level b{font-size:25px}.score-level span{font-size:12px;color:var(--muted)}.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.market-item{padding:17px;background:var(--white);border-top:3px solid var(--ink)}.market-item span{color:var(--gold);font-size:11px;font-weight:800}.market-item h3{margin:7px 0 6px;font-size:17px}.market-item p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}.market-proof{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:16px}.market-proof img{width:100%;height:420px;object-fit:cover;object-position:top;border-radius:6px}.market-note{padding:25px;background:var(--blue-soft);border-top:3px solid var(--blue)}.market-note h3{margin:0 0 10px}.market-note p{margin:0 0 12px;color:#4d5c60;line-height:1.75}.market-note ul{margin:0;padding-left:18px;color:#4d5c60;line-height:1.8}.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.video-card{overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:6px}.video-frame{display:grid;place-items:center;height:430px;background:#0c0d0c}.video-frame video{width:100%;height:100%;object-fit:contain}.video-copy{padding:16px}.video-copy span{font-size:11px;color:var(--gold);font-weight:800}.video-copy h3{margin:7px 0;font-size:18px}.video-copy p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.lesson{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:20px;background:var(--white)}.lesson b{font-size:31px;color:var(--gold)}.lesson h3{margin:0 0 6px;font-size:17px}.lesson p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.status{display:grid;grid-template-columns:1fr 1fr;gap:18px}.status article{padding:25px;background:var(--white);border-top:4px solid var(--green)}.status article:last-child{border-top-color:var(--red)}.status h3{margin:0 0 12px;font-size:21px}.status ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.week{background:var(--white);padding:22px}.week span{color:var(--gold);font-size:11px;font-weight:850}.week h3{margin:8px 0;font-size:18px}.week p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.cadence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.cadence article{padding:20px;background:#faf9f5;border:1px solid var(--line)}.cadence h3{margin:0 0 7px}.cadence p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.deliverables{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.deliverable{padding:18px;background:var(--green-soft);border-top:3px solid var(--green)}.deliverable b{display:block;margin-bottom:6px}.deliverable span{color:#4b6258;font-size:12px;line-height:1.6}.decision{display:grid;grid-template-columns:1fr 1fr;gap:18px}.decision-copy{padding:28px;background:var(--charcoal);color:#fff}.decision-copy h3{margin:0 0 12px;font-size:23px}.decision-copy p{margin:0;color:#d3d6d1;line-height:1.8}.decision-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}.decision-list div{padding:16px;background:var(--white)}.decision-list b{display:block;margin-bottom:4px}.decision-list span{color:var(--muted);font-size:12px;line-height:1.6}.report-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.report-link{padding:18px;background:var(--white);border:1px solid var(--line);border-radius:5px}.report-link span{color:var(--gold);font-size:11px;font-weight:800}.report-link h3{margin:7px 0;font-size:16px}.report-link p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.report-link strong{display:inline-block;margin-top:10px;font-size:12px;color:var(--blue)}.footer{display:flex;justify-content:space-between;gap:24px;margin-top:70px;padding:20px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.7}
+    @media(max-width:960px){.timeline{grid-template-columns:repeat(2,1fr)}.method{grid-template-columns:repeat(3,1fr)}.archetypes{grid-template-columns:repeat(2,1fr)}.report-links,.deliverables{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(3,1fr)}.metric:nth-child(3){border-right:0}}
+    @media(max-width:760px){.wrap{width:calc(100% - 28px)}.hero,.hero-inner{min-height:570px}.hero h1{font-size:36px}.hero-lead{font-size:16px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(3){border-right:1px solid var(--line)}.metric:nth-child(even){border-right:0}.section{padding-top:52px}.section-head{grid-template-columns:1fr;gap:6px}.section h2{font-size:27px}.boss-line,.truth,.score-wrap,.market-proof,.status,.decision{grid-template-columns:1fr}.goal-band{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.method{grid-template-columns:repeat(2,1fr)}.gate{grid-template-columns:repeat(2,1fr)}.market-grid{grid-template-columns:repeat(2,1fr)}.videos{grid-template-columns:1fr}.video-frame{height:500px}.lessons{grid-template-columns:1fr}.roadmap{grid-template-columns:repeat(2,1fr)}.cadence{grid-template-columns:1fr}.report-links,.deliverables{grid-template-columns:1fr}.footer{flex-direction:column}.market-proof img{height:340px}}
+    @media(max-width:470px){.hero h1{font-size:31px}.hero-top{flex-direction:column;gap:4px}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.method,.market-grid,.roadmap{grid-template-columns:1fr}.archetypes{grid-template-columns:1fr}.gate{grid-template-columns:1fr}.video-frame{height:430px}.speech blockquote{font-size:18px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="../visual-quality-framework/assets/hero.jpg" alt="四类个人IP视觉样本">
+    <div class="wrap hero-inner">
+      <div class="hero-top"><span>保险个人IP视觉研究 · 阶段总汇报</span><span>2026-07-24—2026-07-26</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">EXECUTIVE REVIEW / VISUAL IP SYSTEM</p>
+        <h1>保险个人IP视觉研究：建立可复制的视觉决策系统</h1>
+        <p class="hero-lead">本阶段已完成市场扫描、视觉标准建立、主页母版验证与动态视频验收，形成从样本发现到拍摄验证的研究框架，并明确当前可用结论与下一阶段验证边界。</p>
+        <div class="hero-tags"><span>市场扫描</span><span>主页母版</span><span>动态拆解</span><span>100分验收</span><span>持续监测</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="metrics" aria-label="累计研究规模">
+      <div class="metric"><b>494</b><span>保险相关内容结果</span></div>
+      <div class="metric"><b>294</b><span>发现创作者</span></div>
+      <div class="metric"><b>58</b><span>主页身份核验</span></div>
+      <div class="metric"><b>1,377</b><span>累计处理封面记录</span></div>
+      <div class="metric"><b>17</b><span>视频完整动态拆解</span></div>
+    </section>
+
+    <section class="section" id="opening">
+      <div class="section-head"><div class="section-no">00 / 执行摘要</div><div><h2>阶段成果与下一步判断</h2></div></div>
+      <div class="boss-line">
+        <article class="speech"><small>核心结论</small><blockquote>本阶段从494条相关内容中识别294位创作者，完成32个保险个人IP市场扫描，并对8个指定账号的239张主页封面和25条代表视频进行深度拆解。研究显示，保险市场以固定口播为主，同时满足账号规模、视觉质量与稳定复用的母版仍然稀缺。研究流程现已统一为粉丝量级筛选、主页至少3次复现、动态视频验收和85分准入。下一阶段重点是建立8–12套标杆母版，并进入内部IP真实拍摄验证。</blockquote></article>
+        <aside class="takeaways">
+          <div class="takeaway"><b>研究目标</b><span>将主观审美判断转化为可筛选、可评分、可复用、可拍摄验收的视觉标准。</span></div>
+          <div class="takeaway"><b>当前状态</b><span>市场地图和判断标准已经形成；正式标杆库仍在建设，不应把历史样本直接当最终答案。</span></div>
+          <div class="takeaway"><b>下一步重点</b><span>由扩大账号样本转向形成8–12套达到85分、能够匹配具体人物IP的拍摄母版。</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="goal">
+      <div class="section-head"><div class="section-no">01 / 研究目标</div><div><h2>从账号参考升级为可复制的视觉标准</h2><p class="section-desc">账号是证据来源，研究成果需直接支持场景选择、灯光、人物位置、镜头和制作方式。</p></div></div>
+      <div class="goal-band">
+        <div class="wrong"><small>非核心交付</small><h3>头部账号名单</h3><p>粉丝规模不代表视觉质量；单条优质视频不代表账号具有稳定系统；同一场景也无法适配所有人物。</p></div>
+        <div class="right"><small>核心交付</small><h3>保险个人IP视觉决策系统</h3><p>持续发现优质画面，验证其成立条件与复制能力，再将母版匹配给不同人物IP并进入真实拍摄测试。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head"><div class="section-no">02 / 阶段成果</div><div><h2>研究分为四个阶段，分别解决不同问题</h2><p class="section-desc">四个阶段分别覆盖市场全貌、账号母版、质量判断与持续发现；样本规模不直接等同于优质母版。</p></div></div>
+      <div class="timeline">
+        <a class="phase" href="../industry-30/report.html" aria-label="打开保险行业个人IP市场扫描报告"><div class="phase-media"><img src="../industry-30/frames/first3-overview.jpg" alt="保险账号市场扫描画面"><b>PHASE 01</b></div><div class="phase-copy"><small>市场普查</small><h3>保险行业30+个人IP</h3><p>16个主题、494条内容结果、294位创作者、58个主页核验，最终保留32个保险个人IP和922张封面。</p><strong>解决：市场上谁在做、目前大致怎么呈现。</strong><span class="phase-link">打开完整报告 <b aria-hidden="true">→</b></span></div></a>
+        <a class="phase" href="../elite-8/report.html" aria-label="打开8个指定IP账号深拆报告"><div class="phase-media"><img src="../elite-8/contact-sheets/chen-jiayi.jpg" alt="指定账号主页画面拆解"><b>PHASE 02</b></div><div class="phase-copy"><small>账号深拆</small><h3>8个指定IP内部版式</h3><p>239张主页封面、25条代表视频、17条逐镜头动态分析，覆盖场景、光线、构图、字幕、插图与动效。</p><strong>解决：一个IP内部有哪些母版、母版如何重复。</strong><span class="phase-link">打开完整报告 <b aria-hidden="true">→</b></span></div></a>
+        <a class="phase" href="../visual-quality-framework/report.html" aria-label="打开好画面判断标准报告"><div class="phase-media"><img src="../visual-quality-framework/assets/hero.jpg" alt="好画面四类视觉原型"><b>PHASE 03</b></div><div class="phase-copy"><small>标准建立</small><h3>什么是好的版面</h3><p>形成四类信任原型、100分评分表、85分准入线和四项一票否决，从颜色分类上升到人物与场景匹配。</p><strong>解决：以统一标准替代主观审美判断。</strong><span class="phase-link">打开完整报告 <b aria-hidden="true">→</b></span></div></a>
+        <a class="phase" href="../daily-visual-monitor/2026-07-26/report.html" aria-label="打开跨行业每日视觉监测报告"><div class="phase-media"><img src="../daily-visual-monitor/2026-07-26/contact-sheets/he-zhijuan.jpg" alt="每日跨行业视觉候选"><b>PHASE 04</b></div><div class="phase-copy"><small>每日试跑</small><h3>跨行业持续发现</h3><p>首日53条样本、7个主页复查、216张封面、4个粉丝达标账号，最终0个达到85分。</p><strong>解决：检验标准能否防止为满足数量而降低标杆质量。</strong><span class="phase-link">打开完整报告 <b aria-hidden="true">→</b></span></div></a>
+      </div>
+      <div class="truth">
+        <article><h3>样本适用边界</h3><p>8个指定IP中，谢员外达到新的跨行业核心门槛，董可人接近50万；其余账号用于版式研究，不直接列为头部标杆。</p></article>
+        <article><h3>阶段研究价值</h3><p>指定样本支持了母版结构、动态字幕与场景差异研究，并推动筛选标准由账号罗列升级为双门槛与动态验收。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="section-head"><div class="section-no">03 / 研究方法</div><div><h2>所有候选账号统一经过六步证据链</h2><p class="section-desc">搜索热度与粉丝量用于判断研究优先级，视觉质量仍需通过主页复现与动态视频验证。</p></div></div>
+      <div class="method">
+        <article class="method-step"><span>01</span><h3>内容发现</h3><p>按账号主页主要讲述的方向搜索，不依赖名字关键词。</p></article>
+        <article class="method-step"><span>02</span><h3>身份与量级</h3><p>排除公司号、搬运号；保险≥30万，跨行业≥50万。</p></article>
+        <article class="method-step"><span>03</span><h3>视觉盲筛</h3><p>暂时忽略观点、标题和互动量，只看人物、场景、构图、光色。</p></article>
+        <article class="method-step"><span>04</span><h3>主页复现</h3><p>最近约30条作品中，同一母版至少重复出现3次。</p></article>
+        <article class="method-step"><span>05</span><h3>动态核验</h3><p>下载代表视频，检查转头、手势、对焦、曝光、动效与比例。</p></article>
+        <article class="method-step"><span>06</span><h3>评分入库</h3><p>100分量表，85分以上才进入正式标杆母版池。</p></article>
+      </div>
+      <div class="gate">
+        <div><b>保险个人IP ≥30万</b><span>50万以上列核心头部</span></div>
+        <div><b>其他专业IP ≥50万</b><span>100万以上列核心头部</span></div>
+        <div><b>主页母版 ≥3次</b><span>排除一条偶发精修</span></div>
+        <div><b>视觉评分 ≥85</b><span>没有合格就零新增</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="quality">
+      <div class="section-head"><div class="section-no">04 / 判断标准</div><div><h2>优质画面的核心，是建立与人物定位一致的信任</h2></div></div>
+      <div class="formula"><p>好版面 = <strong>人物可信</strong> × 场景作证 × 构图聚焦 × 光色统一 × 长期复制</p></div>
+      <div class="archetypes">
+        <article class="archetype"><img src="../visual-quality-framework/assets/authority.jpg" alt="权威编辑型画面"><div><small>A / AUTHORITY</small><h3>权威编辑型</h3><p>有阅历、有判断、说话有分量。适合强观点和资深人物。</p></div></article>
+        <article class="archetype"><img src="../visual-quality-framework/assets/warm.jpg" alt="温暖陪伴型画面"><div><small>B / WARMTH</small><h3>温暖陪伴型</h3><p>愿意听、能陪伴、能把复杂问题讲清楚。</p></div></article>
+        <article class="archetype"><img src="../visual-quality-framework/assets/resource.jpg" alt="资源身份型画面"><div><small>C / STATUS</small><h3>资源身份型</h3><p>城市、圈层和视野本身就是能力证据。</p></div></article>
+        <article class="archetype"><img src="../visual-quality-framework/assets/rational.jpg" alt="理性分析型画面"><div><small>D / CLARITY</small><h3>理性分析型</h3><p>信息清楚、判断克制、没有多余表演。</p></div></article>
+      </div>
+      <div class="score-wrap">
+        <table class="score-table"><thead><tr><th>评分维度</th><th>分值</th><th>核心问题</th></tr></thead><tbody>
+          <tr><td>人物与IP匹配</td><td>20</td><td>场景是否强化人物身份与可信度？</td></tr>
+          <tr><td>人物视觉中心</td><td>15</td><td>第一眼是否先看到脸与状态？</td></tr>
+          <tr><td>构图与姿态</td><td>15</td><td>眼位、肩线、留白和手势是否稳定？</td></tr>
+          <tr><td>光线与肤色</td><td>15</td><td>面部是否真实、有轮廓、有眼神光？</td></tr>
+          <tr><td>场景证据与层次</td><td>15</td><td>空间是否提供身份线索且不抢人？</td></tr>
+          <tr><td>颜色与服装关系</td><td>10</td><td>人物能否从背景中分离？</td></tr>
+          <tr><td>动态稳定</td><td>5</td><td>人物运动时曝光、对焦与构图是否稳定？</td></tr>
+          <tr><td>长期复制</td><td>5</td><td>该画面能否支持连续内容生产？</td></tr>
+        </tbody></table>
+        <div class="score-side"><div class="score-level"><b>85–100</b><span>进入标杆母版池</span></div><div class="score-level"><b>75–84</b><span>可用，但需要修正</span></div><div class="score-level"><b>0–74</b><span>不作为对标</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="market">
+      <div class="section-head"><div class="section-no">05 / 市场结论</div><div><h2>保险市场的九种呈现方式已经可以被看成一张地图</h2><p class="section-desc">它们不是九种好模板。当前市场大量集中在低成本固定口播，真正稀缺的是场景、行动和人物身份同时成立的母版。</p></div></div>
+      <div class="market-grid">
+        <article class="market-item"><span>01 / 主流</span><h3>固定棚拍口播</h3><p>生产稳定，但易出现画面扁平与表达同质化。</p></article>
+        <article class="market-item"><span>02 / 专业</span><h3>办公室顾问型</h3><p>用办公桌、会客区和书房证明职业身份。</p></article>
+        <article class="market-item"><span>03 / 上升</span><h3>访谈／播客型</h3><p>层次更好，但横竖屏适配是常见问题。</p></article>
+        <article class="market-item"><span>04 / 教学</span><h3>大屏／白板讲解</h3><p>解释效率高，需避免图表弱化人物主体。</p></article>
+        <article class="market-item"><span>05 / 信息</span><h3>证据图解型</h3><p>保单、报告、数据和新闻截图辅助说明。</p></article>
+        <article class="market-item"><span>06 / 高价值</span><h3>商务纪录片型</h3><p>办公、会谈、出差与演讲能够强化专业影响力。</p></article>
+        <article class="market-item"><span>07 / 关系</span><h3>生活场景口播</h3><p>家、咖啡厅、汽车和户外增强真实感。</p></article>
+        <article class="market-item"><span>08 / 叙事</span><h3>故事／角色演绎</h3><p>变化丰富，但制作与母版稳定性要求更高。</p></article>
+        <article class="market-item"><span>09 / 低成本</span><h3>直播切片／AI／卡片</h3><p>常见生产方式，不默认等于好版面。</p></article>
+      </div>
+      <div class="market-proof">
+        <img src="../elite-8/frames/zhi-ning-shuo/10-7660029317379902720.jpg" alt="明亮灰蓝棚拍动态画面分镜">
+        <aside class="market-note"><h3>目前最值得继续寻找的方向</h3><p>不是继续收集更多黑金、蓝金、黄字账号，而是补足市场上真正有审美且能够适配人物IP的稀缺母版。</p><ul><li>竖屏原生的访谈与播客</li><li>有真实行动的商务纪录片</li><li>能建立关系感的生活场景</li><li>顾问身份明确、人物不贴墙的办公室场景</li><li>图解与人物关系平衡的教学画面</li></ul></aside>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-head"><div class="section-no">06 / 视频证据</div><div><h2>静态封面不能替代动态验收</h2><p class="section-desc">同一个画面在主页封面、人物动作和实际播放比例中可能是三个不同结果。</p></div></div>
+      <div class="videos">
+        <article class="video-card"><div class="video-frame"><video src="../visual-quality-framework/assets/warm-clip.mp4" poster="../visual-quality-framework/assets/warm.jpg" muted loop controls playsinline preload="metadata"></video></div><div class="video-copy"><span>GOOD SIGNAL</span><h3>动作不破坏画面秩序</h3><p>手势集中在身体中段，人物始终是第一视觉中心，场景层次没有因动作失控。</p></div></article>
+        <article class="video-card"><div class="video-frame"><video src="../elite-8/videos/zhi-ning-shuo/10-7660029317379902720.mp4" muted loop controls playsinline preload="metadata"></video></div><div class="video-copy"><span>STYLE CASE</span><h3>指定账号的可复用版式</h3><p>固定中景、灰蓝柔光、侧边身份栏与动态字幕形成完整母版；它是版式案例，不自动等于头部标杆。</p></div></article>
+        <article class="video-card"><div class="video-frame"><video src="../daily-visual-monitor/2026-07-26/evidence-videos/he-zhijuan-proof.mp4" muted loop controls playsinline preload="metadata"></video></div><div class="video-copy"><span>NEAR MISS / 83</span><h3>封面质量较高，播放比例仍然失分</h3><p>暖木访谈、人物和灯光都稳定，但16:9横屏在抖音竖屏环境中有效面积不足，因此没有进入85分标杆池。</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="section-head"><div class="section-no">07 / 核心结论</div><div><h2>阶段研究形成六项核心结论</h2></div></div>
+      <div class="lessons">
+        <article class="lesson"><b>01</b><div><h3>粉丝量是成熟度门槛，不是审美分</h3><p>大账号可能视觉普通，小账号也可能偶发拍得漂亮；两者都不能越过主页和动态核验。</p></div></article>
+        <article class="lesson"><b>02</b><div><h3>单条优质画面不等于稳定母版</h3><p>稳定母版必须在主页重复至少3次，并能在人物动作中保持质量。</p></div></article>
+        <article class="lesson"><b>03</b><div><h3>应该叫“场景”，不是“背景”</h3><p>场景承担身份和关系证明；只负责装饰的漂亮房间，对IP没有真正价值。</p></div></article>
+        <article class="lesson"><b>04</b><div><h3>判断顺序决定结果</h3><p>人物 ＞ 状态 ＞ 场景证据 ＞ 装饰细节。先看见家具或城市，画面主次就反了。</p></div></article>
+        <article class="lesson"><b>05</b><div><h3>封面与视频必须分开验收</h3><p>封面裁切、播放比例、字幕动效和手势都会改变实际观看体验。</p></div></article>
+        <article class="lesson"><b>06</b><div><h3>零新增同样构成有效结论</h3><p>首日监测0新增，说明85分准入线发挥了筛选作用，避免低质量样本进入标杆池。</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="status">
+      <div class="section-head"><div class="section-no">08 / 当前状态</div><div><h2>基础研究框架已建立，标杆母版仍需实拍验证</h2></div></div>
+      <div class="status">
+        <article><h3>已经可靠</h3><ul><li>保险个人IP的市场发现方式</li><li>个人IP与公司账号的区分规则</li><li>粉丝量双门槛与主页复现要求</li><li>好画面的100分验收标准</li><li>九类市场呈现方式与四类信任原型</li><li>封面、主页和动态视频的证据链</li></ul></article>
+        <article><h3>仍需继续验证</h3><ul><li>真正达到85分的保险头部母版数量仍不足</li><li>跨行业标杆如何迁移到保险场景，需要人物匹配</li><li>每个内部IP适合哪种信任原型尚未完成</li><li>灯光和机位参数还需要真实拍摄校准</li><li>画面优化是否提升停留与完播，需要发布数据验证</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-head"><div class="section-no">09 / 下一步</div><div><h2>未来30天：从研究报告走向可拍摄母版</h2><p class="section-desc">持续采集是研究输入，阶段成果需沉淀为制作团队可直接执行的视觉规范。</p></div></div>
+      <div class="roadmap">
+        <article class="week"><span>WEEK 01</span><h3>补齐标杆池</h3><p>保险≥30万、跨行业≥50万；每天约50条初筛，主页复查5–8个，不设强制入库数量。</p></article>
+        <article class="week"><span>WEEK 02</span><h3>形成母版库</h3><p>目标沉淀首批8–12套85分以上母版，覆盖办公室、竖版访谈、纪录片和生活场景。</p></article>
+        <article class="week"><span>WEEK 03</span><h3>匹配内部IP</h3><p>按权威、陪伴、资源、理性四类信任方式，为每个人选1套主母版和1套补充母版。</p></article>
+        <article class="week"><span>WEEK 04</span><h3>拍摄与验证</h3><p>选择2–3个IP试拍，固定机位、灯光、人物比例和场景层次，再用发布数据复盘。</p></article>
+      </div>
+      <div class="cadence">
+        <article><h3>每日</h3><p>搜索约50条 → 视觉盲筛 → 粉丝门槛 → 主页复查。允许当天0新增。</p></article>
+        <article><h3>每周</h3><p>汇总新增母版、近线案例和淘汰原因，更新九类市场地图与评分基线。</p></article>
+        <article><h3>每月</h3><p>输出标杆库版本、内部IP匹配表、拍摄规范和发布后的画面数据复盘。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="deliverables">
+      <div class="section-head"><div class="section-no">10 / 最终交付</div><div><h2>下一阶段形成四类可直接推动生产的成果</h2></div></div>
+      <div class="deliverables">
+        <article class="deliverable"><b>标杆母版库</b><span>每套含账号证据、主页复现、动态视频和100分评分。</span></article>
+        <article class="deliverable"><b>人物匹配表</b><span>每个内部IP适合的信任原型、场景与对标依据。</span></article>
+        <article class="deliverable"><b>拍摄规范</b><span>灯位、机位、人物占比、姿态、服装、背景层次与安全区。</span></article>
+        <article class="deliverable"><b>效果复盘</b><span>画面版本与停留、完播、互动数据的对应关系。</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="decision">
+      <div class="section-head"><div class="section-no">11 / 管理层决策</div><div><h2>下一阶段需确认三项标准与资源</h2></div></div>
+      <div class="decision">
+        <div class="decision-copy"><h3>推进建议</h3><p>建议进入下一阶段，研究目标由扩大账号样本转为建成首批可拍摄母版并完成内部验证。核心成果由名单数量调整为母版质量与真实拍摄复现能力。</p></div>
+        <div class="decision-list"><div><b>确认标准</b><span>同意30万／50万粉丝门槛、主页3次复现和85分入库线。</span></div><div><b>确定试拍人物</b><span>选择2–3个内部IP，明确其年龄、职业阶段与目标信任感。</span></div><div><b>提供最小制作资源</b><span>场地、灯光、摄影与服装配合，用一轮试拍把标准落到真实画面。</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="reports">
+      <div class="section-head"><div class="section-no">12 / 证据入口</div><div><h2>阶段研究报告与完整证据</h2></div></div>
+      <div class="report-links">
+        <a class="report-link" href="../industry-30/report.html"><span>MARKET SCAN</span><h3>保险行业30+IP</h3><p>账号池、主页封面、市场版式与数据证据。</p><strong>打开报告 →</strong></a>
+        <a class="report-link" href="../elite-8/report.html"><span>DEEP DIVE</span><h3>8个指定IP深拆</h3><p>账号内部版式、视频、灯光、字幕与动效。</p><strong>打开报告 →</strong></a>
+        <a class="report-link" href="../visual-quality-framework/report.html"><span>QUALITY FRAMEWORK</span><h3>什么是好的版面</h3><p>四类信任原型、构图逻辑与100分验收。</p><strong>打开报告 →</strong></a>
+        <a class="report-link" href="../daily-visual-monitor/2026-07-26/report.html"><span>DAILY MONITOR</span><h3>首日视觉监测</h3><p>双门槛、九类市场地图与0新增证据。</p><strong>打开报告 →</strong></a>
+      </div>
+    </section>
+
+    <footer class="footer"><span>数据来源：抖音公开搜索结果、公开账号主页与公开视频。累计封面记录包含不同阶段采集，不代表完全去重后的唯一作品数。</span><span>本研究仅分析人物IP的场景、构图、光线、色彩与动态呈现，不评价或复制账号观点内容。</span></footer>
+  </main>
+</body>
+</html>

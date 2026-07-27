@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta name="robots" content="noindex,nofollow,noarchive"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>抖音保险个人IP视觉版式共性研究</title>
+<style>
+:root{--paper:#f1f0ec;--surface:#fff;--ink:#171a19;--muted:#656a67;--line:#d8dad6;--red:#d94735;--teal:#17786f;--gold:#e5ad28;--blue:#2563a6;--soft:#e8ece8;--radius:6px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0}.page{max-width:1440px;margin:auto;background:var(--surface);min-height:100vh}.topbar{height:44px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.hero{padding:56px 40px 36px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr);gap:48px}.eyebrow,.mini-label{margin:0 0 8px;font-size:12px;color:var(--red);font-weight:800;text-transform:uppercase}.hero h1{font-size:44px;line-height:1.14;margin:0;max-width:900px;letter-spacing:0}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:820px}.scope{border-left:4px solid var(--teal);padding-left:20px;align-self:end}.scope strong{display:block;font-size:18px;margin-bottom:8px}.scope span{display:block;color:var(--muted);font-size:13px;line-height:1.7}.stats{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--line)}.stat{padding:24px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:28px}.stat span{font-size:12px;color:var(--muted)}.band{padding:50px 40px;border-bottom:1px solid var(--line)}.band.alt{background:#f7f8f6}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:26px}.section-head h2{font-size:30px;margin:0}.section-head p{margin:0;max-width:650px;color:var(--muted);line-height:1.7}.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.insight{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:190px}.insight span{font:800 12px monospace;color:var(--teal)}.insight h3{font-size:19px;margin:14px 0 10px}.insight p{font-size:14px;line-height:1.75;color:var(--muted);margin:0}.archetypes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.archetype{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}.archetype i{display:block;width:30px;height:5px;margin-bottom:18px}.archetype h3{font-size:16px;margin:0 0 8px}.archetype p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:4px;font:inherit;font-size:13px;cursor:pointer}.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}.account-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.account-card{position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;display:grid;grid-template-columns:42% 58%;min-height:450px}.account-card.is-hidden{display:none}.account-rank{position:absolute;top:10px;left:10px;z-index:2;background:rgba(23,26,25,.9);color:#fff;padding:5px 7px;border-radius:3px;font:700 12px monospace}.sheet-link{background:#ecece8;overflow:hidden}.sheet-link img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .2s}.sheet-link:hover img{transform:scale(1.025)}.account-body{padding:20px;display:flex;flex-direction:column;min-width:0}.account-title-row{display:flex;align-items:start;justify-content:space-between;gap:10px}.account-title-row h3{font-size:19px;line-height:1.3;margin:0;overflow-wrap:anywhere}.status{display:inline-block;white-space:nowrap;padding:4px 6px;border-radius:3px;font-size:11px;font-weight:700}.status.active{background:#ddefe9;color:#126158}.status.slow{background:#fff1cb;color:#7b5600}.status.legacy{background:#f4dcd7;color:#8b2e21}.account-style{font-size:14px;font-weight:700;margin:16px 0 12px}.account-note{margin:0 0 12px;padding:9px;border-left:3px solid var(--gold);background:#fff7dc;color:#6c520d;font-size:11px;line-height:1.55}.metric-line{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);padding:12px 0;gap:6px}.metric-line span{font-size:10px;color:var(--muted)}.metric-line b{display:block;color:var(--ink);font-size:15px}.account-spec{font-size:12px;margin:14px 0}.account-spec div{display:grid;grid-template-columns:66px 1fr;gap:8px;margin:7px 0}.account-spec dt{color:var(--muted)}.account-spec dd{margin:0}.account-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted)}a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}.series-layout{display:grid;grid-template-columns:minmax(280px,.48fr) minmax(0,1fr);gap:32px;align-items:start}.series-reference{margin:0}.series-reference img{width:100%;max-height:720px;object-fit:contain;object-position:top;background:#2f271f;display:block}.series-reference figcaption,.series-evidence figcaption{font-size:11px;color:var(--muted);line-height:1.6;margin-top:8px}.series-facts{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}.series-facts span{padding:16px 10px;border-right:1px solid var(--line);font-size:11px;color:var(--muted)}.series-facts span:last-child{border-right:0}.series-facts b{display:block;font-size:20px;color:var(--ink);margin-bottom:4px}.series-rules{margin:18px 0 0}.series-rules div{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line)}.series-rules dt{font-size:12px;font-weight:800;color:var(--teal)}.series-rules dd{margin:0;font-size:13px;line-height:1.7;color:var(--muted)}.series-evidence{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:24px;margin-top:28px}.series-evidence figure{margin:0}.series-evidence img{width:100%;display:block;background:#ecece8}.series-boundary{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:12px;line-height:1.7;color:var(--muted)}.series-boundary strong{color:var(--red)}.table-wrap{overflow:auto;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:1200px;font-size:12px}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{position:sticky;top:0;background:#eff1ee;font-size:11px;color:var(--muted)}td small{display:block;color:var(--muted);max-width:180px;margin-top:4px}.video-list{display:grid;gap:20px}.video-case{display:grid;grid-template-columns:250px minmax(280px,.8fr) minmax(360px,1.2fr);gap:22px;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;align-items:start}.video-media video{width:100%;aspect-ratio:9/16;background:#111;display:block}.video-kicker{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)}.video-kicker span{background:var(--ink);color:#fff;padding:4px 6px;border-radius:2px;font-family:monospace}.video-kicker em{font-style:normal;color:var(--red);font-weight:700}.video-copy h3{font-size:21px;margin:16px 0 8px}.video-meta{font-size:12px;color:var(--muted)}.video-copy ul{padding-left:18px;font-size:13px;line-height:1.75}.video-actions{display:flex;gap:12px;font-size:13px;font-weight:700}.timeline{margin:0}.timeline img{width:100%;display:block;background:#ecece8}.timeline figcaption{font-size:11px;color:var(--muted);margin-top:8px}.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.method-grid h3{font-size:17px}.method-grid p,.method-grid li{font-size:13px;line-height:1.75;color:var(--muted)}.prompt{margin:0;background:#171a19;color:#f5f5f0;padding:26px;border-radius:var(--radius);font:13px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;max-height:560px;overflow:auto}.prompt-toolbar{display:flex;justify-content:flex-end;margin-bottom:10px}.copy{border:0;background:var(--teal);color:#fff;padding:9px 14px;border-radius:4px;cursor:pointer;font:inherit}.footer{padding:28px 40px;display:flex;justify-content:space-between;gap:24px;color:var(--muted);font-size:11px;line-height:1.6;background:#171a19;color:#c7ccc8}.toc{display:flex;gap:18px;flex-wrap:wrap}.toc a{font-size:12px;color:var(--muted)}@media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.account-grid{grid-template-columns:repeat(2,1fr)}.video-case{grid-template-columns:220px 1fr}.timeline{grid-column:1/-1}.archetypes{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.topbar{padding:0 18px}.hero{padding:36px 18px 26px;grid-template-columns:1fr;gap:20px}.hero h1{font-size:32px}.stats{grid-template-columns:repeat(2,1fr)}.stat{padding:18px}.band{padding:36px 18px}.section-head{align-items:start;flex-direction:column}.insight-grid{grid-template-columns:1fr}.archetypes{grid-template-columns:1fr}.account-grid{grid-template-columns:1fr}.account-card{grid-template-columns:40% 60%;min-height:430px}.account-body{padding:15px}.metric-line{grid-template-columns:repeat(2,1fr)}.series-layout,.series-evidence{grid-template-columns:1fr}.series-reference img{max-height:660px}.series-facts{grid-template-columns:repeat(2,1fr)}.series-facts span:nth-child(2){border-right:0}.series-rules div{grid-template-columns:76px 1fr;gap:10px}.video-case{grid-template-columns:1fr;padding:14px}.video-media{max-width:260px;margin:auto}.timeline{grid-column:auto}.method-grid{grid-template-columns:1fr}.footer{padding:24px 18px;flex-direction:column}.toc{display:none}}
+</style></head><body><main class="page">
+<div class="topbar"><span>抖音保险个人IP · 横向比较报告</span><span>数据截点 2026-07-24</span></div>
+<header class="hero"><div><p class="eyebrow">30+2 ACCOUNT VISUAL STUDY</p><h1>抖音保险个人IP<br>视觉版式共性研究</h1><p>先看作品讲什么，再确认作者是谁。只看主页视觉、封面、作品标题形式、字幕位置、文字动效、插图与视频插入方式、镜头和剪辑节奏；保险内容分类只用于判断账号是否属于本赛道，不评价观点或产品。</p></div><aside class="scope"><strong>内容优先，不按昵称找人</strong><span>16个作品主题形成494条结果，反查294位作者。正式样本最近作品的保险相关占比必须达到60%；用户指定版面另列补充层，不挤占正式30人。</span></aside></header>
+<nav class="band toc"><a href="#findings">共性结论</a><a href="#archetypes">五类母版</a><a href="#accounts">32账号</a><a href="#series">指定系列</a><a href="#matrix">完整矩阵</a><a href="#videos">10条视频</a><a href="#prompt">最终Prompt</a></nav>
+<section class="stats"><div class="stat"><b>494</b><span>主题作品结果</span></div><div class="stat"><b>294</b><span>作品反查作者</span></div><div class="stat"><b>32</b><span>已研究个人IP</span></div><div class="stat"><b>922</b><span>主页作品样本</span></div><div class="stat"><b>7+23+2</b><span>严格头部 + 垂直代表 + 指定</span></div><div class="stat"><b>10</b><span>已下载代表视频</span></div></section>
+<section class="band" id="findings"><div class="section-head"><div><p class="eyebrow">COMMON PATTERNS</p><h2>真正反复出现的版面共性</h2></div><p>结论来自32个主页的同口径封面联系表与11条视频时间轴，其中30个为正式行业样本、2个为用户指定补充。所有“内容观点”变量被排除，只保留视觉呈现。</p></div><div class="insight-grid">
+<article class="insight"><span>01 / IDENTITY</span><h3>先固定人，再固定模板</h3><p>大多数账号把脸作为第一视觉锚点：半身或近景占画面约35%–60%，眼睛靠近上三分之一。即使换场景，人物发型、服装气质和出镜距离仍保持连续。</p></article>
+<article class="insight"><span>02 / TITLE ZONE</span><h3>标题区固定，字组按句替换</h3><p>标题最常落在上中区或胸口到下三分之一，通常2–4行。少数账号故意用遮眼横条形成辨识度，但会牺牲人物亲近感。</p></article>
+<article class="insight"><span>03 / COLOR</span><h3>白黄负责阅读，红色只做重点</h3><p>主标题常用白/黄，黑描边或暗底保证对比；红色只强调数字、否定词或关键短语。蓝、绿、枣红通常作为长期固定品牌块，不频繁换色。</p></article>
+<article class="insight"><span>04 / TYPOGRAPHY</span><h3>粗黑体优先，层级比字体花样重要</h3><p>作品标题平均约29个汉字；43%含数字，33%使用问句。画面大字通常控制在两种字号和两种字重内。</p></article>
+<article class="insight"><span>05 / MOTION</span><h3>动效不复杂，稳定位置持续刷新</h3><p>常见做法不是整屏飞字，而是固定字幕区内按语义块淡入、弹入或硬替换。人物口播越稳定，字组动效越需要承担节奏。</p></article>
+<article class="insight"><span>06 / INSERTS</span><h3>证据图用硬切，氛围图用叠景</h3><p>手机截图、表格、新闻页多采用全屏/半屏硬切；生活场景用B-roll；港险和城市类账号常把人物抠像叠在实景上。插图通常不超过一个主信息层。</p></article>
+</div></section>
+<section class="band alt" id="archetypes"><div class="section-head"><div><p class="eyebrow">5 VISUAL ARCHETYPES</p><h2>五种可复用视觉母版</h2></div><p>不是让所有账号长得一样，而是先选择一个主母版，再用10%–20%的次母版保持新鲜感。</p></div><div class="archetypes">
+<article class="archetype"><i style="background:#171a19"></i><h3>固定棚拍口播</h3><p>固定背景、机位、服装气质与字幕区。适合高频、稳定、低制作成本。</p></article><article class="archetype"><i style="background:#e5ad28"></i><h3>黑金专业卡</h3><p>暗背景、大标题、人物半身与数据卡。专业感强，但要避免全页过度压黑。</p></article><article class="archetype"><i style="background:#d94735"></i><h3>生活纪录片</h3><p>家庭、工作、出行场景连续，标题克制。个人信任更强，视觉统一依赖人物本身。</p></article><article class="archetype"><i style="background:#17786f"></i><h3>抠像知识卡</h3><p>人物抠像叠城市/资料背景，大字占上半区。信息密度高，制作要求也更高。</p></article><article class="archetype"><i style="background:#2563a6"></i><h3>证据图混剪</h3><p>口播为主，截图、表格、手机界面做硬切。适合建立“有依据”的视觉感。</p></article>
+</div></section>
+<section class="band" id="accounts"><div class="section-head"><div><p class="eyebrow">30+2 PERSONAL IPS</p><h2>32个个人IP封面全景</h2></div><div class="filters"><button class="filter active" data-filter="all">全部32</button><button class="filter" data-filter="strict">严格头部</button><button class="filter" data-filter="vertical">垂直代表</button><button class="filter" data-filter="supplemental">指定补充</button><button class="filter" data-filter="active">当前活跃</button><button class="filter" data-filter="legacy">历史样本</button></div></div><div class="account-grid">
+  <article class="account-card" data-tier="strict" data-activity="active">
+    <div class="account-rank">01</div>
+    <a class="sheet-link" href="contact-sheets/03.jpg" target="_blank"><img src="contact-sheets/03.jpg" alt="懂保爷科普最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>懂保爷科普</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">蓝金棚拍卡</p>
+      
+      <div class="metric-line"><span><b>205.2万</b>粉丝</span><span><b>939.3万</b>获赞</span><span><b>97%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>29/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>人物/AI棚拍 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>深蓝·金·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAAyKrAe6vQIZXONC1LQcHTzc3Zj-iCPyMeTVm6yYZzF-m6qbf2AVMX3-lAWUZZWCXn" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="active">
+    <div class="account-rank">02</div>
+    <a class="sheet-link" href="contact-sheets/01.jpg" target="_blank"><img src="contact-sheets/01.jpg" alt="保瓶儿最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>保瓶儿</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">黑金图解口播</p>
+      
+      <div class="metric-line"><span><b>151.7万</b>粉丝</span><span><b>715.0万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>真人+图卡 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区/整页卡</dd></div><div><dt>主配色</dt><dd>黑·金·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAA_SCf-XEttYRH0bJmPmeOhnVAHbOGWhG8vU1jK3gRTO8" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="slow">
+    <div class="account-rank">03</div>
+    <a class="sheet-link" href="contact-sheets/02.jpg" target="_blank"><img src="contact-sheets/02.jpg" alt="二姐聊保障测评最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>二姐聊保障测评</h3></div><span class="status slow">低频/阶段停更</span></div>
+      <p class="account-style">图书墙棚拍</p>
+      
+      <div class="metric-line"><span><b>136.7万</b>粉丝</span><span><b>324.1万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>中下区横条</dd></div><div><dt>主配色</dt><dd>黑·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/02/16</span><a href="https://www.douyin.com/user/MS4wLjABAAAAbCof8wI3mH9KmzoyoLT4MrC2yXeLznIVXYQ_NbDnF40" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="legacy">
+    <div class="account-rank">04</div>
+    <a class="sheet-link" href="contact-sheets/04.jpg" target="_blank"><img src="contact-sheets/04.jpg" alt="保险一点通最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>保险一点通</h3></div><span class="status legacy">历史头部</span></div>
+      <p class="account-style">鲜色横条棚拍</p>
+      
+      <div class="metric-line"><span><b>112.4万</b>粉丝</span><span><b>374.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>中部横条</dd></div><div><dt>主配色</dt><dd>橙·青·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2022/12/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAARoXDxZrCq3m99Y57MGpETZrXw0sTb97CWs1dlDmkVMw" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="active">
+    <div class="account-rank">05</div>
+    <a class="sheet-link" href="contact-sheets/05.jpg" target="_blank"><img src="contact-sheets/05.jpg" alt="保之道最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>保之道</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">黑金人物叙事</p>
+      
+      <div class="metric-line"><span><b>110.8万</b>粉丝</span><span><b>208.3万</b>获赞</span><span><b>90%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>27/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>黑·金·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAAbuNTgwGQ87B5jIl9upGAFnoszaNuG7GOV34XFcVykxTFxjT7_h9LLinefZ48h766" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="active">
+    <div class="account-rank">06</div>
+    <a class="sheet-link" href="contact-sheets/11.jpg" target="_blank"><img src="contact-sheets/11.jpg" alt="知兰保-宜顾问最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>知兰保-宜顾问</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">暗色商务口播</p>
+      
+      <div class="metric-line"><span><b>69.0万</b>粉丝</span><span><b>204.3万</b>获赞</span><span><b>89%</b>保险内容</span><span><b>28</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>25/28 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>黑·金·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAAT99YFSlv0vMn0JjnFFng3MJZkwCSaTDo_NxjBB3phCU" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="strict" data-activity="active">
+    <div class="account-rank">07</div>
+    <a class="sheet-link" href="contact-sheets/12.jpg" target="_blank"><img src="contact-sheets/12.jpg" alt="西西的保险说最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">严格头部</p><h3>西西的保险说</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">白底近景口播</p>
+      
+      <div class="metric-line"><span><b>63.2万</b>粉丝</span><span><b>407.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>人物/家庭 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>黑·白·绿</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/13</span><a href="https://www.douyin.com/user/MS4wLjABAAAAD4CzSYktSW5GTMP21afiOqKrtRGK4DTzq417pGnYRns5yJSdUZb7qf1vbT_icIQk" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">08</div>
+    <a class="sheet-link" href="contact-sheets/13.jpg" target="_blank"><img src="contact-sheets/13.jpg" alt="茶派说社保最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>茶派说社保</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">蓝色遮罩口播</p>
+      
+      <div class="metric-line"><span><b>49.8万</b>粉丝</span><span><b>148.5万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>面部中区</dd></div><div><dt>主配色</dt><dd>蓝·绿·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAAtVNaOMEMDD7VO7AaeXgTza5Tp2wk-9txK9O3F-74_M3QCKFbLMxZm8vf6DjBhiDu" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">09</div>
+    <a class="sheet-link" href="contact-sheets/14.jpg" target="_blank"><img src="contact-sheets/14.jpg" alt="bella核保课堂最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>bella核保课堂</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">黑幕粉字口播</p>
+      
+      <div class="metric-line"><span><b>48.1万</b>粉丝</span><span><b>269.3万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>黑·粉·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/06/18</span><a href="https://www.douyin.com/user/MS4wLjABAAAACVN_xFXLlkLH18botfebsNMHFEYLgI6Dx8vAN0334Yw" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">10</div>
+    <a class="sheet-link" href="contact-sheets/16.jpg" target="_blank"><img src="contact-sheets/16.jpg" alt="青山说养老最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>青山说养老</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">枣红横条口播</p>
+      
+      <div class="metric-line"><span><b>47.0万</b>粉丝</span><span><b>236.2万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>中部横条</dd></div><div><dt>主配色</dt><dd>枣红·白·黑</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/19</span><a href="https://www.douyin.com/user/MS4wLjABAAAAf1cm9fBaT-Ow_TJTWHxu5cdVJlV6Aja0q9dlvc5F5RiiAznRcCoLfZq3VRwwbuKn" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">11</div>
+    <a class="sheet-link" href="contact-sheets/17.jpg" target="_blank"><img src="contact-sheets/17.jpg" alt="小师妹说保最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>小师妹说保</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">浅背景半身口播</p>
+      
+      <div class="metric-line"><span><b>37.5万</b>粉丝</span><span><b>155.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>白·蓝·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/05/18</span><a href="https://www.douyin.com/user/MS4wLjABAAAAQ04omqSqE5tKTB94M4dB8vbLrZZpBsMT57sWmYibKlacKs3Z540RBgTG9OHuhzyY" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">12</div>
+    <a class="sheet-link" href="contact-sheets/18.jpg" target="_blank"><img src="contact-sheets/18.jpg" alt="奶爸保险测评最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>奶爸保险测评</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">新闻感混剪封面</p>
+      
+      <div class="metric-line"><span><b>31.8万</b>粉丝</span><span><b>116.1万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>真人+证据图 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>上区/两侧</dd></div><div><dt>主配色</dt><dd>黑·黄·青</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/17</span><a href="https://www.douyin.com/user/MS4wLjABAAAAk8H3SHUDYbgzj7HR9RVX96ZAW0sJW7_R52QPOT_Qixs" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">13</div>
+    <a class="sheet-link" href="contact-sheets/19.jpg" target="_blank"><img src="contact-sheets/19.jpg" alt="王辰讲保险最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>王辰讲保险</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">自拍/双机位对谈</p>
+      
+      <div class="metric-line"><span><b>23.9万</b>粉丝</span><span><b>112.0万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>自然色·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/06/24</span><a href="https://www.douyin.com/user/MS4wLjABAAAAncUeEmi05Hc44wxkpqkJCdNu-C7OSkLX_1WdTwW_xzvTxRirKEnohLdRcahA7tlv" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="slow">
+    <div class="account-rank">14</div>
+    <a class="sheet-link" href="contact-sheets/09.jpg" target="_blank"><img src="contact-sheets/09.jpg" alt="汉林说养老最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>汉林说养老</h3></div><span class="status slow">低频/阶段停更</span></div>
+      <p class="account-style">书法背景黄字</p>
+      
+      <div class="metric-line"><span><b>23.1万</b>粉丝</span><span><b>57.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>顶部+底部</dd></div><div><dt>主配色</dt><dd>黑·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2025/08/25</span><a href="https://www.douyin.com/user/MS4wLjABAAAAYDujH6yj4KFK9iFfKNifBS9PWLWHXexxS7SK6xW0R3X6ppH9o3CfBu_UtRwod7FG" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="legacy">
+    <div class="account-rank">15</div>
+    <a class="sheet-link" href="contact-sheets/20.jpg" target="_blank"><img src="contact-sheets/20.jpg" alt="demi说保险最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>demi说保险</h3></div><span class="status legacy">历史头部</span></div>
+      <p class="account-style">黑底粉字口播</p>
+      
+      <div class="metric-line"><span><b>22.2万</b>粉丝</span><span><b>86.0万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>黑·粉·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2024/11/04</span><a href="https://www.douyin.com/user/MS4wLjABAAAASw-JhcA0xGQQwkiR-J2W5GMimmINin4YR2LpRn21Rt4" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">16</div>
+    <a class="sheet-link" href="contact-sheets/22.jpg" target="_blank"><img src="contact-sheets/22.jpg" alt="哲里蒋保险测评最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>哲里蒋保险测评</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">木纹棚拍大字</p>
+      
+      <div class="metric-line"><span><b>18.9万</b>粉丝</span><span><b>72.6万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>顶部+底部</dd></div><div><dt>主配色</dt><dd>棕·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/10</span><a href="https://www.douyin.com/user/MS4wLjABAAAA2DyOoHCDht_hbfcfhMw6Hb__yxDdGVcCisxERXmHtru1gIghdCpWpMbTvnjvvYMv" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">17</div>
+    <a class="sheet-link" href="contact-sheets/23.jpg" target="_blank"><img src="contact-sheets/23.jpg" alt="保险达人赵裕庆最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>保险达人赵裕庆</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">蓝框信息卡</p>
+      
+      <div class="metric-line"><span><b>17.6万</b>粉丝</span><span><b>68.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>深蓝·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAALRlYMa0oLU9Ay-4FImV0Z4FhqVCwnuXK4Sv4bN1Q59k" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">18</div>
+    <a class="sheet-link" href="contact-sheets/24.jpg" target="_blank"><img src="contact-sheets/24.jpg" alt="仁哥鉴保最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>仁哥鉴保</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">办公旅拍纪实</p>
+      
+      <div class="metric-line"><span><b>16.5万</b>粉丝</span><span><b>83.9万</b>获赞</span><span><b>93%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>28/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>黑·红·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAAvQlEsvJ1JYei_GgetGRjQv7i4bvYTLflwWBM_Bfgy_an4I4vur4nx_-Z0ei5rY-d" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="legacy">
+    <div class="account-rank">19</div>
+    <a class="sheet-link" href="contact-sheets/25.jpg" target="_blank"><img src="contact-sheets/25.jpg" alt="何欢说养老最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>何欢说养老</h3></div><span class="status legacy">历史头部</span></div>
+      <p class="account-style">近景场景口播</p>
+      
+      <div class="metric-line"><span><b>15.4万</b>粉丝</span><span><b>71.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>白·黄·黑</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2025/04/11</span><a href="https://www.douyin.com/user/MS4wLjABAAAARvYeKcgk_FF4-75jLnAlZkixq3RUl29lFTyqNGyBZSs" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">20</div>
+    <a class="sheet-link" href="contact-sheets/26.jpg" target="_blank"><img src="contact-sheets/26.jpg" alt="梁俊安心保最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>梁俊安心保</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">统一背景文字卡</p>
+      
+      <div class="metric-line"><span><b>15.2万</b>粉丝</span><span><b>90.8万</b>获赞</span><span><b>94%</b>保险内容</span><span><b>18</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>17/18 条保险相关</dd></div><div><dt>身份锚点</dt><dd>文字卡+偶发真人 · ≤20%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>中央满版</dd></div><div><dt>主配色</dt><dd>蓝·红·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAA7l3C8YyKyY2Q9AyvBUGQqjjM3Uw5q5D1xNH7zg0h4w0" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">21</div>
+    <a class="sheet-link" href="contact-sheets/27.jpg" target="_blank"><img src="contact-sheets/27.jpg" alt="霞姐说保最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>霞姐说保</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">户外大字口播</p>
+      
+      <div class="metric-line"><span><b>15.0万</b>粉丝</span><span><b>37.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>18</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>18/18 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>中上区</dd></div><div><dt>主配色</dt><dd>黄·红·黑</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/05/24</span><a href="https://www.douyin.com/user/MS4wLjABAAAAc1Do8AkTQsVaRLv1ZDzhaPRA53lIx5j0b_-7dqGfcCitk1Asds5LtPCd5VftE_ZP" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">22</div>
+    <a class="sheet-link" href="contact-sheets/30.jpg" target="_blank"><img src="contact-sheets/30.jpg" alt="邓华的保险创业日记最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>邓华的保险创业日记</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">职场纪录片</p>
+      
+      <div class="metric-line"><span><b>10.0万</b>粉丝</span><span><b>51.5万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>白·黄·青</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/18</span><a href="https://www.douyin.com/user/MS4wLjABAAAAmlRWEzKIJcr-A23ZKs8qmCsWznQSN1dbJODnARmMprk" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">23</div>
+    <a class="sheet-link" href="contact-sheets/31.jpg" target="_blank"><img src="contact-sheets/31.jpg" alt="杜冠华最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>杜冠华</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">黑底近景访谈</p>
+      
+      <div class="metric-line"><span><b>8.0万</b>粉丝</span><span><b>27.7万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>黑·白·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/11</span><a href="https://www.douyin.com/user/MS4wLjABAAAAet1rh_vea-puM1fTBHhyVQ6CVhcAp9DgzXYEpDO3AMk" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="slow">
+    <div class="account-rank">24</div>
+    <a class="sheet-link" href="contact-sheets/32.jpg" target="_blank"><img src="contact-sheets/32.jpg" alt="丽君说保险最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>丽君说保险</h3></div><span class="status slow">低频/阶段停更</span></div>
+      <p class="account-style">生活近景口播</p>
+      
+      <div class="metric-line"><span><b>7.4万</b>粉丝</span><span><b>7.6万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>自然色·白·青</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2025/12/23</span><a href="https://www.douyin.com/user/MS4wLjABAAAAMw6TLbNqaPknSw9crcGS9HaXGVAocbvnsHePCkzOOiZTnSrbPd3EI2O46QpHlarj" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">25</div>
+    <a class="sheet-link" href="contact-sheets/38.jpg" target="_blank"><img src="contact-sheets/38.jpg" alt="李越保险侠最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>李越保险侠</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">遮罩大字近景</p>
+      
+      <div class="metric-line"><span><b>4.3万</b>粉丝</span><span><b>36.4万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>面部中区</dd></div><div><dt>主配色</dt><dd>黑·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAApAaNQpGcc_KO2_Qo04vgzkviuJYblk3DUNJhjVxOpFs" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="supplemental" data-activity="active">
+    <div class="account-rank">26</div>
+    <a class="sheet-link" href="contact-sheets/50.jpg" target="_blank"><img src="contact-sheets/50.jpg" alt="财商-黄永鳌最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">指定补充</p><h3>财商-黄永鳌</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">暖色商务访谈</p>
+      <p class="account-note">用户指定的系列版面补充样本；近30条直接保险相关作品约10%，不进入正式30个保险垂类样本。</p>
+      <div class="metric-line"><span><b>4.1万</b>粉丝</span><span><b>23.1万</b>获赞</span><span><b>10%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>3/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>左上标题/下中字幕</dd></div><div><dt>主配色</dt><dd>暖棕·白·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/14</span><a href="https://www.douyin.com/user/MS4wLjABAAAA9Fn-ZRA7gP9zN7qDLiPLg6NufEBzyJXopsQUYMGLjXBt2PkjBZjUnsqPDNP_oOXL" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">27</div>
+    <a class="sheet-link" href="contact-sheets/39.jpg" target="_blank"><img src="contact-sheets/39.jpg" alt="大连刘媛媛 商业保险最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>大连刘媛媛 商业保险</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">横条字幕近景</p>
+      
+      <div class="metric-line"><span><b>4.0万</b>粉丝</span><span><b>8.2万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中高</dd></div><div><dt>标题区</dt><dd>中部横条</dd></div><div><dt>主配色</dt><dd>黑·粉·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/06/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAAm_zntQAFJfPwbeoO17wVWz3RJAnIYtwkbZ4Vq6QHA5X9hyauhTk_e3QlGb-DwwNU" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">28</div>
+    <a class="sheet-link" href="contact-sheets/40.jpg" target="_blank"><img src="contact-sheets/40.jpg" alt="薛金花养老规划最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>薛金花养老规划</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">多场景生活口播</p>
+      
+      <div class="metric-line"><span><b>3.9万</b>粉丝</span><span><b>15.7万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥80%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>黑·白·青</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/18</span><a href="https://www.douyin.com/user/MS4wLjABAAAAZCYQT_7JMtmm91PPyHpiRmRgXhW66lhnvbQvQ3aY4uY" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">29</div>
+    <a class="sheet-link" href="contact-sheets/41.jpg" target="_blank"><img src="contact-sheets/41.jpg" alt="俊姐保险测评最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>俊姐保险测评</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">自拍型口播</p>
+      
+      <div class="metric-line"><span><b>3.8万</b>粉丝</span><span><b>14.3万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>中</dd></div><div><dt>标题区</dt><dd>中下区</dd></div><div><dt>主配色</dt><dd>自然色·青·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAA902XHEzcXqwXCuOwLU6Da8zd7DCX8kifrLJ8F0c-EIWDtXTVVhfg80qLT4GUDgLr" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="active">
+    <div class="account-rank">30</div>
+    <a class="sheet-link" href="contact-sheets/48.jpg" target="_blank"><img src="contact-sheets/48.jpg" alt="有毒有料陈葭怡最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>有毒有料陈葭怡</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">近景观点口播</p>
+      
+      <div class="metric-line"><span><b>3.4万</b>粉丝</span><span><b>11.0万</b>获赞</span><span><b>100%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>30/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>上中区</dd></div><div><dt>主配色</dt><dd>黑·白·黄</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/20</span><a href="https://www.douyin.com/user/MS4wLjABAAAAFK--kb-BAp0C7mp15fh9t8m297e_dzXkgYm1YGMKnk8" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="vertical" data-activity="slow">
+    <div class="account-rank">31</div>
+    <a class="sheet-link" href="contact-sheets/42.jpg" target="_blank"><img src="contact-sheets/42.jpg" alt="懂保险的鹏哥最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">垂直代表</p><h3>懂保险的鹏哥</h3></div><span class="status slow">低频/阶段停更</span></div>
+      <p class="account-style">抠像大字海报</p>
+      
+      <div class="metric-line"><span><b>2.4万</b>粉丝</span><span><b>4,612</b>获赞</span><span><b>100%</b>保险内容</span><span><b>18</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>18/18 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>顶部+底部</dd></div><div><dt>主配色</dt><dd>黑·黄·红</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/03/10</span><a href="https://www.douyin.com/user/MS4wLjABAAAAvNwEiJ0QBglLpQw3VNtjXQmjZDX3PYzms76F4KZPqgc" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article>
+  <article class="account-card" data-tier="supplemental" data-activity="active">
+    <div class="account-rank">32</div>
+    <a class="sheet-link" href="contact-sheets/49.jpg" target="_blank"><img src="contact-sheets/49.jpg" alt="微易老周最近封面联系表" loading="lazy"></a>
+    <div class="account-body">
+      <div class="account-title-row"><div><p class="mini-label">指定补充</p><h3>微易老周</h3></div><span class="status active">当前活跃</span></div>
+      <p class="account-style">棚拍/舞台双母版</p>
+      
+      <div class="metric-line"><span><b>1.6万</b>粉丝</span><span><b>13.6万</b>获赞</span><span><b>97%</b>保险内容</span><span><b>30</b>封面</span></div>
+      <dl class="account-spec"><div><dt>主页主讲</dt><dd>29/30 条保险相关</dd></div><div><dt>身份锚点</dt><dd>固定真人 · ≥90%</dd></div><div><dt>模板统一</dt><dd>高</dd></div><div><dt>标题区</dt><dd>上中区/中下区</dd></div><div><dt>主配色</dt><dd>黑·黄·白</dd></div></dl>
+      <div class="account-foot"><span>最近可见 2026/07/21</span><a href="https://www.douyin.com/user/MS4wLjABAAAARuCmIXbJRUDA8HtOGDYKFB7RVM2G59cebm78mkHMdu18stfxWp8MjjG01IMQi1t5" target="_blank" rel="noreferrer">打开主页 ↗</a></div>
+    </div>
+  </article></div></section>
+<section class="band alt" id="series"><div class="section-head"><div><p class="eyebrow">DESIGNATED SERIES BREAKDOWN</p><h2>黄永鳌「保单认知」系列版面</h2></div><p>不是按昵称入选，而是先在主页内筛出“保单”相关作品，再核对同一版面是否重复出现。共找到6条系列样本，并逐帧核对24秒代表视频。</p></div>
+<div class="series-layout"><figure class="series-reference"><img src="contact-sheets/50-reference.jpg" alt="黄永鳌保单认知系列代表画面" loading="lazy"><figcaption>用户指定画面：顶部问题标题、左侧身份条、下方语义字幕同时出现</figcaption></figure><div class="series-copy"><div class="series-facts"><span><b>6</b>同系列作品</span><span><b>10%</b>近30条保险相关</span><span><b>24秒</b>动效核对样本</span><span><b>0次</b>机位/插图切换</span></div><dl class="series-rules"><div><dt>标题公式</dt><dd>顶部左对齐两行；白色细字承载解释，首词加粗，核心词用高明度黄色粗体。</dd></div><div><dt>身份履历</dt><dd>左侧中段设置黄色姓名与白色履历，形成长期可信度锚点。</dd></div><div><dt>人物构图</dt><dd>人物偏右、胸像或半身近景，眼睛落在上中区，左侧保留文字负空间。 暖棕色室内环境、浅景深、商务服装与桌面前景共同制造高端访谈感。</dd></div><div><dt>字幕位置</dt><dd>下方中部使用白色语义字幕，关键词放大并改成黄色；逐句替换而非整屏飞字。</dd></div><div><dt>文字动效</dt><dd>已核对24秒代表视频：顶部标题与左侧身份条全程常驻，底部字幕约每2至4秒按语义块硬替换，关键词放大并变黄；全片固定机位，无插图、无B-roll、无转场。</dd></div><div><dt>插图/视频</dt><dd>代表视频全片未插图、未插视频、未转场；这套母版依靠人物微表情和字幕换组维持节奏。</dd></div></dl></div></div>
+<div class="series-evidence"><figure><img src="contact-sheets/50-series.jpg" alt="黄永鳌保单认知系列6条封面联系表" loading="lazy"><figcaption>主页内搜索“保单”得到的6条系列封面</figcaption></figure><figure><img src="contact-sheets/50-motion.jpg" alt="黄永鳌代表视频6帧字幕变化时间轴" loading="lazy"><figcaption>代表视频每4秒一帧：标题与身份条常驻，只有底部字幕按语义块替换</figcaption></figure></div>
+<p class="series-boundary"><strong>样本边界：</strong>该账号近30条中直接保险相关约3条，不满足正式样本的60%门槛，因此仅作为用户指定的版面系列补充，不改变原30人名单。</p></section>
+<section class="band alt" id="matrix"><div class="section-head"><div><p class="eyebrow">COMPARISON MATRIX</p><h2>完整横向比较矩阵</h2></div><p>“主页保险内容”按最近可见作品标题与标签分类；固定身份和模板统一来自封面联系表人工视觉复核。</p></div><div class="table-wrap"><table><thead><tr><th>#</th><th>个人IP</th><th>层级</th><th>粉丝</th><th>获赞</th><th>作品</th><th>主页保险内容</th><th>封面</th><th>主视觉</th><th>身份覆盖</th><th>统一度</th><th>活跃</th></tr></thead><tbody>
+  <tr><td>1</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAyKrAe6vQIZXONC1LQcHTzc3Zj-iCPyMeTVm6yYZzF-m6qbf2AVMX3-lAWUZZWCXn" target="_blank">懂保爷科普</a><small>懂保爷认证账号</small></td><td>严格头部</td><td>205.2万</td><td>939.3万</td><td>1069</td><td>97%</td><td>30</td><td>蓝金棚拍卡</td><td>≥80%</td><td>中高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>2</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAA_SCf-XEttYRH0bJmPmeOhnVAHbOGWhG8vU1jK3gRTO8" target="_blank">保瓶儿</a><small>广东人人保险代理有限公司</small></td><td>严格头部</td><td>151.7万</td><td>715.0万</td><td>2127</td><td>100%</td><td>30</td><td>黑金图解口播</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>3</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAbCof8wI3mH9KmzoyoLT4MrC2yXeLznIVXYQ_NbDnF40" target="_blank">二姐聊保障测评</a><small>未见认证</small></td><td>严格头部</td><td>136.7万</td><td>324.1万</td><td>1048</td><td>100%</td><td>30</td><td>图书墙棚拍</td><td>≥90%</td><td>高</td><td><span class="status slow">低频/阶段停更</span></td></tr>
+  <tr><td>4</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAARoXDxZrCq3m99Y57MGpETZrXw0sTb97CWs1dlDmkVMw" target="_blank">保险一点通</a><small>未见认证</small></td><td>严格头部</td><td>112.4万</td><td>374.4万</td><td>542</td><td>100%</td><td>30</td><td>鲜色横条棚拍</td><td>≥90%</td><td>高</td><td><span class="status legacy">历史头部</span></td></tr>
+  <tr><td>5</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAbuNTgwGQ87B5jIl9upGAFnoszaNuG7GOV34XFcVykxTFxjT7_h9LLinefZ48h766" target="_blank">保之道</a><small>腾晟保险代理有限公司贵州分公司</small></td><td>严格头部</td><td>110.8万</td><td>208.3万</td><td>1396</td><td>90%</td><td>30</td><td>黑金人物叙事</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>6</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAT99YFSlv0vMn0JjnFFng3MJZkwCSaTDo_NxjBB3phCU" target="_blank">知兰保-宜顾问</a><small>未见认证</small></td><td>严格头部</td><td>69.0万</td><td>204.3万</td><td>1328</td><td>89%</td><td>28</td><td>暗色商务口播</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>7</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAD4CzSYktSW5GTMP21afiOqKrtRGK4DTzq417pGnYRns5yJSdUZb7qf1vbT_icIQk" target="_blank">西西的保险说</a><small>保险自媒体</small></td><td>严格头部</td><td>63.2万</td><td>407.4万</td><td>1970</td><td>100%</td><td>30</td><td>白底近景口播</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>8</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAtVNaOMEMDD7VO7AaeXgTza5Tp2wk-9txK9O3F-74_M3QCKFbLMxZm8vf6DjBhiDu" target="_blank">茶派说社保</a><small>未见认证</small></td><td>垂直代表</td><td>49.8万</td><td>148.5万</td><td>571</td><td>100%</td><td>30</td><td>蓝色遮罩口播</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>9</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAACVN_xFXLlkLH18botfebsNMHFEYLgI6Dx8vAN0334Yw" target="_blank">bella核保课堂</a><small>未见认证</small></td><td>垂直代表</td><td>48.1万</td><td>269.3万</td><td>469</td><td>100%</td><td>30</td><td>黑幕粉字口播</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>10</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAf1cm9fBaT-Ow_TJTWHxu5cdVJlV6Aja0q9dlvc5F5RiiAznRcCoLfZq3VRwwbuKn" target="_blank">青山说养老</a><small>海口龙华真恩亿百货商行</small></td><td>垂直代表</td><td>47.0万</td><td>236.2万</td><td>356</td><td>100%</td><td>30</td><td>枣红横条口播</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>11</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAQ04omqSqE5tKTB94M4dB8vbLrZZpBsMT57sWmYibKlacKs3Z540RBgTG9OHuhzyY" target="_blank">小师妹说保</a><small>未见认证</small></td><td>垂直代表</td><td>37.5万</td><td>155.4万</td><td>85</td><td>100%</td><td>30</td><td>浅背景半身口播</td><td>≥90%</td><td>中高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>12</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAk8H3SHUDYbgzj7HR9RVX96ZAW0sJW7_R52QPOT_Qixs" target="_blank">奶爸保险测评</a><small>奶爸保官方认证账号</small></td><td>垂直代表</td><td>31.8万</td><td>116.1万</td><td>1973</td><td>100%</td><td>30</td><td>新闻感混剪封面</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>13</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAncUeEmi05Hc44wxkpqkJCdNu-C7OSkLX_1WdTwW_xzvTxRirKEnohLdRcahA7tlv" target="_blank">王辰讲保险</a><small>北京骏采文化传播有限公司</small></td><td>垂直代表</td><td>23.9万</td><td>112.0万</td><td>582</td><td>100%</td><td>30</td><td>自拍/双机位对谈</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>14</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAYDujH6yj4KFK9iFfKNifBS9PWLWHXexxS7SK6xW0R3X6ppH9o3CfBu_UtRwod7FG" target="_blank">汉林说养老</a><small>未见认证</small></td><td>垂直代表</td><td>23.1万</td><td>57.4万</td><td>841</td><td>100%</td><td>30</td><td>书法背景黄字</td><td>≥90%</td><td>高</td><td><span class="status slow">低频/阶段停更</span></td></tr>
+  <tr><td>15</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAASw-JhcA0xGQQwkiR-J2W5GMimmINin4YR2LpRn21Rt4" target="_blank">demi说保险</a><small>上海宜信保文化传媒有限公司</small></td><td>垂直代表</td><td>22.2万</td><td>86.0万</td><td>119</td><td>100%</td><td>30</td><td>黑底粉字口播</td><td>≥90%</td><td>中高</td><td><span class="status legacy">历史头部</span></td></tr>
+  <tr><td>16</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAA2DyOoHCDht_hbfcfhMw6Hb__yxDdGVcCisxERXmHtru1gIghdCpWpMbTvnjvvYMv" target="_blank">哲里蒋保险测评</a><small>深圳市得同保险代理有限公司吉林分公司</small></td><td>垂直代表</td><td>18.9万</td><td>72.6万</td><td>351</td><td>100%</td><td>30</td><td>木纹棚拍大字</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>17</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAALRlYMa0oLU9Ay-4FImV0Z4FhqVCwnuXK4Sv4bN1Q59k" target="_blank">保险达人赵裕庆</a><small>未见认证</small></td><td>垂直代表</td><td>17.6万</td><td>68.4万</td><td>3550</td><td>100%</td><td>30</td><td>蓝框信息卡</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>18</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAvQlEsvJ1JYei_GgetGRjQv7i4bvYTLflwWBM_Bfgy_an4I4vur4nx_-Z0ei5rY-d" target="_blank">仁哥鉴保</a><small>新青年保险代理（佛山）有限公司顺德分公司</small></td><td>垂直代表</td><td>16.5万</td><td>83.9万</td><td>1074</td><td>93%</td><td>30</td><td>办公旅拍纪实</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>19</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAARvYeKcgk_FF4-75jLnAlZkixq3RUl29lFTyqNGyBZSs" target="_blank">何欢说养老</a><small>未见认证</small></td><td>垂直代表</td><td>15.4万</td><td>71.4万</td><td>238</td><td>100%</td><td>30</td><td>近景场景口播</td><td>≥90%</td><td>中高</td><td><span class="status legacy">历史头部</span></td></tr>
+  <tr><td>20</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAA7l3C8YyKyY2Q9AyvBUGQqjjM3Uw5q5D1xNH7zg0h4w0" target="_blank">梁俊安心保</a><small>保险从业人员</small></td><td>垂直代表</td><td>15.2万</td><td>90.8万</td><td>272</td><td>94%</td><td>18</td><td>统一背景文字卡</td><td>≤20%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>21</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAc1Do8AkTQsVaRLv1ZDzhaPRA53lIx5j0b_-7dqGfcCitk1Asds5LtPCd5VftE_ZP" target="_blank">霞姐说保</a><small>未见认证</small></td><td>垂直代表</td><td>15.0万</td><td>37.4万</td><td>151</td><td>100%</td><td>18</td><td>户外大字口播</td><td>≥90%</td><td>中高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>22</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAmlRWEzKIJcr-A23ZKs8qmCsWznQSN1dbJODnARmMprk" target="_blank">邓华的保险创业日记</a><small>明亚保险经纪股份有限公司保险从业人员</small></td><td>垂直代表</td><td>10.0万</td><td>51.5万</td><td>490</td><td>100%</td><td>30</td><td>职场纪录片</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>23</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAet1rh_vea-puM1fTBHhyVQ6CVhcAp9DgzXYEpDO3AMk" target="_blank">杜冠华</a><small>明亚保险经纪股份有限公司保险规划师</small></td><td>垂直代表</td><td>8.0万</td><td>27.7万</td><td>600</td><td>100%</td><td>30</td><td>黑底近景访谈</td><td>≥90%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>24</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAMw6TLbNqaPknSw9crcGS9HaXGVAocbvnsHePCkzOOiZTnSrbPd3EI2O46QpHlarj" target="_blank">丽君说保险</a><small>未见认证</small></td><td>垂直代表</td><td>7.4万</td><td>7.6万</td><td>359</td><td>100%</td><td>30</td><td>生活近景口播</td><td>≥80%</td><td>中</td><td><span class="status slow">低频/阶段停更</span></td></tr>
+  <tr><td>25</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAApAaNQpGcc_KO2_Qo04vgzkviuJYblk3DUNJhjVxOpFs" target="_blank">李越保险侠</a><small>明亚保险经纪资深销售总监 2022年MDRT</small></td><td>垂直代表</td><td>4.3万</td><td>36.4万</td><td>1489</td><td>100%</td><td>30</td><td>遮罩大字近景</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>26</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAA9Fn-ZRA7gP9zN7qDLiPLg6NufEBzyJXopsQUYMGLjXBt2PkjBZjUnsqPDNP_oOXL" target="_blank">财商-黄永鳌</a><small>未见认证</small></td><td>指定补充</td><td>4.1万</td><td>23.1万</td><td>169</td><td>10%</td><td>30</td><td>暖色商务访谈</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>27</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAm_zntQAFJfPwbeoO17wVWz3RJAnIYtwkbZ4Vq6QHA5X9hyauhTk_e3QlGb-DwwNU" target="_blank">大连刘媛媛 商业保险</a><small>明亚保险经纪股份有限公司大连分公司 保险经纪从业人员</small></td><td>垂直代表</td><td>4.0万</td><td>8.2万</td><td>200</td><td>100%</td><td>30</td><td>横条字幕近景</td><td>≥80%</td><td>中高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>28</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAZCYQT_7JMtmm91PPyHpiRmRgXhW66lhnvbQvQ3aY4uY" target="_blank">薛金花养老规划</a><small>未见认证</small></td><td>垂直代表</td><td>3.9万</td><td>15.7万</td><td>122</td><td>100%</td><td>30</td><td>多场景生活口播</td><td>≥80%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>29</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAA902XHEzcXqwXCuOwLU6Da8zd7DCX8kifrLJ8F0c-EIWDtXTVVhfg80qLT4GUDgLr" target="_blank">俊姐保险测评</a><small>科成保险代理有限公司北京分公司</small></td><td>垂直代表</td><td>3.8万</td><td>14.3万</td><td>353</td><td>100%</td><td>30</td><td>自拍型口播</td><td>≥90%</td><td>中</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>30</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAFK--kb-BAp0C7mp15fh9t8m297e_dzXkgYm1YGMKnk8" target="_blank">有毒有料陈葭怡</a><small>保险从业人员</small></td><td>垂直代表</td><td>3.4万</td><td>11.0万</td><td>621</td><td>100%</td><td>30</td><td>近景观点口播</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr>
+  <tr><td>31</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAvNwEiJ0QBglLpQw3VNtjXQmjZDX3PYzms76F4KZPqgc" target="_blank">懂保险的鹏哥</a><small>大童保险销售服务有限公司销售总监</small></td><td>垂直代表</td><td>2.4万</td><td>4,612</td><td>113</td><td>100%</td><td>18</td><td>抠像大字海报</td><td>≥90%</td><td>高</td><td><span class="status slow">低频/阶段停更</span></td></tr>
+  <tr><td>32</td><td><a href="https://www.douyin.com/user/MS4wLjABAAAARuCmIXbJRUDA8HtOGDYKFB7RVM2G59cebm78mkHMdu18stfxWp8MjjG01IMQi1t5" target="_blank">微易老周</a><small>未见认证</small></td><td>指定补充</td><td>1.6万</td><td>13.6万</td><td>183</td><td>97%</td><td>30</td><td>棚拍/舞台双母版</td><td>≥90%</td><td>高</td><td><span class="status active">当前活跃</span></td></tr></tbody></table></div></section>
+<section class="band" id="videos"><div class="section-head"><div><p class="eyebrow">10 DOWNLOADED VIDEOS</p><h2>10条风格差异视频拆解</h2></div><p>8条来自最终30人名单；2条来自本轮因主页保险内容不足60%而移出的账号，保留为“边界对照”，只研究其视觉形式。10条均已保存原片并生成H.264预览。</p></div><div class="video-list"><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/01/01.jpg"><source src="proxies/01_7402829572095446287.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>01</span><b>保瓶儿</b><em>账号内P90</em></div><h3>长叙事混合场景</h3><p class="video-meta">可见点赞 1,841 · 985秒 · 硬切 5 次 · 0.3 次/分钟</p><ul><li>黑底标题卡先行，随后进入固定机位</li><li>全屏数据卡与截图硬切插入</li><li>短句逐组替换，白字为主、黄字强调</li></ul><div class="video-actions"><a href="proxies/01_7402829572095446287.mp4">打开预览</a><a href="https://www.douyin.com/video/7402829572095446287" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/01/timeline.jpg" alt="保瓶儿全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/02/03.jpg"><source src="proxies/02_6862670719826857219.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>02</span><b>二姐聊保障测评</b><em>绝对高表现</em></div><h3>稳定棚拍口播</h3><p class="video-meta">可见点赞 1.5万 · 76秒 · 硬切 0 次 · 0 次/分钟</p><ul><li>开头直接给固定人物和大标题</li><li>基本无插图，依赖手势和字组变化</li><li>黄白描边字幕锁定中下安全区</li></ul><div class="video-actions"><a href="proxies/02_6862670719826857219.mp4">打开预览</a><a href="https://www.douyin.com/video/6862670719826857219" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/02/timeline.jpg" alt="二姐聊保障测评全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/05/01.jpg"><source src="proxies/03_7351000258970766618.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>03</span><b>保之道</b><em>账号内P90</em></div><h3>黑金人物叙事</h3><p class="video-meta">可见点赞 3,013 · 51秒 · 硬切 36 次 · 42.4 次/分钟</p><ul><li>环境空镜进入人物，快速建立场景</li><li>办公室、室外、车内与群像高频交叉</li><li>底部短字幕随硬切同步更换</li></ul><div class="video-actions"><a href="proxies/03_7351000258970766618.mp4">打开预览</a><a href="https://www.douyin.com/video/7351000258970766618" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/03/timeline.jpg" alt="保之道全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/07/03.jpg"><source src="proxies/04_7232143609078811963.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>04</span><b>叶云燕说财经</b><em>边界对照</em></div><h3>舞台演讲包装</h3><p class="video-meta">可见点赞 1.9万 · 226秒 · 硬切 0 次 · 0 次/分钟</p><ul><li>黑底问题标题先行</li><li>演讲与活动资料在中央窗口播放</li><li>顶部问题保持，底部小字幕持续</li></ul><div class="video-actions"><a href="proxies/04_7232143609078811963.mp4">打开预览</a><a href="https://www.douyin.com/video/7232143609078811963" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/04/timeline.jpg" alt="叶云燕说财经全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/13/01.jpg"><source src="proxies/05_7416554376577174793.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>05</span><b>茶派说社保</b><em>绝对高表现</em></div><h3>蓝色遮罩标题</h3><p class="video-meta">可见点赞 1.3万 · 116秒 · 硬切 34 次 · 17.7 次/分钟</p><ul><li>人物近景直入，无独立片头</li><li>手机截图与界面证据全屏或半屏插入</li><li>黄色短字幕按语义块刷新</li></ul><div class="video-actions"><a href="proxies/05_7416554376577174793.mp4">打开预览</a><a href="https://www.douyin.com/video/7416554376577174793" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/05/timeline.jpg" alt="茶派说社保全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/14/03.jpg"><source src="proxies/06_6987693836327865637.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>06</span><b>bella核保课堂</b><em>绝对高表现</em></div><h3>黑底高对比口播</h3><p class="video-meta">可见点赞 22.5万 · 69秒 · 硬切 1 次 · 0.9 次/分钟</p><ul><li>双人对比卡后切固定女主讲</li><li>几乎不换场，靠字组和姿态维持节奏</li><li>白字主体、黄框重点，位置稳定</li></ul><div class="video-actions"><a href="proxies/06_6987693836327865637.mp4">打开预览</a><a href="https://www.douyin.com/video/6987693836327865637" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/06/timeline.jpg" alt="bella核保课堂全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/10/02.jpg"><source src="proxies/07_7311278892814322980.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>07</span><b>HK大表姐—港耀</b><em>边界对照</em></div><h3>抠像城市知识卡</h3><p class="video-meta">可见点赞 19.5万 · 53秒 · 硬切 13 次 · 14.6 次/分钟</p><ul><li>人物在城市背景中直接开讲</li><li>实物近拍、街景与抠像画面交替</li><li>绿色重点词与白色字幕同步弹入</li></ul><div class="video-actions"><a href="proxies/07_7311278892814322980.mp4">打开预览</a><a href="https://www.douyin.com/video/7311278892814322980" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/07/timeline.jpg" alt="HK大表姐—港耀全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/09/03.jpg"><source src="proxies/08_7043211785956019470.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>08</span><b>汉林说养老</b><em>绝对高表现</em></div><h3>固定背景黄字口播</h3><p class="video-meta">可见点赞 6.7万 · 327秒 · 硬切 0 次 · 0 次/分钟</p><ul><li>顶部问题条+小窗人物同时出现</li><li>全片固定黑底结构，无B-roll</li><li>黄色字幕逐句替换，动效克制</li></ul><div class="video-actions"><a href="proxies/08_7043211785956019470.mp4">打开预览</a><a href="https://www.douyin.com/video/7043211785956019470" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/08/timeline.jpg" alt="汉林说养老全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/04/01.jpg"><source src="proxies/09_7034821047283191054.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>09</span><b>保险一点通</b><em>绝对高表现</em></div><h3>鲜色横条固定棚拍</h3><p class="video-meta">可见点赞 5.0万 · 72秒 · 硬切 1 次 · 0.8 次/分钟</p><ul><li>固定人物正面直入</li><li>棚拍背景和机位保持，极少切换</li><li>绿色/黄色胶囊字组在胸口区替换</li></ul><div class="video-actions"><a href="proxies/09_7034821047283191054.mp4">打开预览</a><a href="https://www.douyin.com/video/7034821047283191054" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/09/timeline.jpg" alt="保险一点通全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article><article class="video-case">
+    <div class="video-media"><video controls preload="metadata" playsinline poster="covers/19/05.jpg"><source src="proxies/10_7637881617927261369.mp4" type="video/mp4"></video></div>
+    <div class="video-copy"><div class="video-kicker"><span>10</span><b>王辰讲保险</b><em>账号内P90</em></div><h3>低机位近景口播</h3><p class="video-meta">可见点赞 4,798 · 30秒 · 硬切 6 次 · 11.9 次/分钟</p><ul><li>双人访谈画面直接建立关系</li><li>男女双机位硬切对答</li><li>白色小字幕贴近下三分之一</li></ul><div class="video-actions"><a href="proxies/10_7637881617927261369.mp4">打开预览</a><a href="https://www.douyin.com/video/7637881617927261369" target="_blank">抖音原页 ↗</a></div></div>
+    <figure class="timeline"><img src="frames/10/timeline.jpg" alt="王辰讲保险全片时间轴" loading="lazy"><figcaption>全片等距 12 帧：只用于镜头、字幕、插图与转场判断</figcaption></figure>
+  </article></div></section>
+<section class="band alt"><div class="section-head"><div><p class="eyebrow">METHOD & LIMITS</p><h2>口径、排除与边界</h2></div></div><div class="method-grid"><div><h3>怎么选出30+2个</h3><ol><li>搜索16个作品主题，同时看综合与高赞结果，共记录494条作品。</li><li>从作品反查294位作者；昵称只用于去重和确认主页，不用于判定赛道。</li><li>正式样本逐页抽查最近30条，保险相关内容占比不足60%即排除。</li><li>再排除公司官方号、机构矩阵、多人轮岗与个人身份无法核验账号。</li><li>正式30人按严格头部与垂直代表分层；“微易老周”和“财商-黄永鳌”为用户指定补充，单独标识且不挤占正式名单。后者因主页保险占比约10%，只研究指定的保单系列版面。</li></ol></div><div><h3>本报告不做什么</h3><ul><li>主题分类只用于确认主页主讲方向，不评价保险观点或产品。</li><li>不抓评论，不分析销售话术、咨询承接或转化。</li><li>单条保险爆款不能让泛生活、汽车或泛财经账号进入正式样本。</li><li>可见点赞来自主页卡片，不能替代平台后台数据。</li><li>封面不足30张时按实际可见数量记录，不补造。</li></ul></div></div></section>
+<section class="band" id="prompt"><div class="section-head"><div><p class="eyebrow">REUSABLE MASTER PROMPT</p><h2>最终研究 Prompt</h2></div><p>这份 Prompt 已把“从作品反查作者”“主页保险内容≥60%”“30个都要研究”写成硬约束。</p></div><div class="prompt-toolbar"><button class="copy" type="button">复制 Prompt</button></div><pre class="prompt">终极目标：建立“抖音保险从业者个人IP视觉与运营呈现数据库”，选取30个保险个人IP进行同口径横向研究，以严格头部为主，数量不足时把垂直代表单独分层；不选择公司官方号、机构矩阵号或多人轮岗号。
+
+研究对象定义：
+1. 严格头部：粉丝≥50万，或累计获赞≥300万；
+2. 垂直代表：未达到严格线，但主页最近30条中保险相关作品占比≥60%，在细分赛道中具有稳定产出或鲜明视觉代表性，且个人身份可核验；
+3. 个人IP：固定个人、固定家庭叙事或稳定个人化角色。公司认证可以是从业机构背书，但账号显示名、出镜主体和表达方式必须指向个人；
+4. 最终必须研究30个账号，不允许从30个候选中只挑1个深挖。
+
+抓取与样本：
+- 禁止把账号昵称或昵称中的“保险、养老、理财”等字样作为主要发现方式；
+- 先搜索不少于16个作品主题，包括百万医疗、重疾理赔、家庭风险、养老金、保单架构、财富传承、香港保险、拒赔处理、社保养老和少儿保障；
+- 同时采集综合排序与最多点赞结果，从视频反查作者主页；昵称只用于去重和身份确认，不用于决定是否入选；
+- 对候选逐页核验URL、认证、粉丝、获赞、作品数、最近更新时间，并抽查最近30条作品；
+- 保险及相邻主题作品占比必须≥60%，否则排除；单条保险爆款不能把泛生活、汽车或泛财经账号算作保险IP；
+- 每个入选账号保存最近30张可见封面并生成5×6联系表；
+- 统计固定身份覆盖、模板统一度、标题区、人物比例、主配色、字体层级；
+- 从不同视觉母版中选10条视频。高表现阈值为：账号最近30条可见点赞P90且点赞≥1万；小体量账号允许使用账号内P90，并明确标记；
+- 10条视频必须风格不同，分析开头3秒、固定字幕区、字组动效、截图/插图插入、B-roll、转场和硬切频率。
+
+严格边界：
+- 只研究账号视觉定位、封面版式、标题文字形式、字体层级、字幕位置、文字动效、插图/视频插入方式、镜头与剪辑节奏；
+- 不分析保险观点、产品好坏、脚本观点、评论区、销售话术、转化路径和私域运营；
+- 数据缺失必须写“未获取”，不得猜测；降低门槛必须分层说明，不得把小号伪装成百万级头部。
+
+最终交付：
+- 一份单页HTML横向比较报告；
+- 30个账号完整矩阵与30张封面联系表；
+- 10条可播放代表视频及逐条视觉动效拆解；
+- 共性、差异、可复用版式规则、不可照搬的风险；
+- 页脚列明抓取时间、样本边界和数据来源。</pre></section>
+<footer class="footer"><span>来源：抖音登录后公开作品与主页。采集时间：2026-07-24。内容发现池、主页数据、封面和视频索引均保存在本报告目录。</span><span>主题分类仅用于样本归属；保险产品与观点不在本报告分析范围。</span></footer>
+</main><script>
+const cards=[...document.querySelectorAll('.account-card')];const buttons=[...document.querySelectorAll('.filter')];buttons.forEach(button=>button.addEventListener('click',()=>{buttons.forEach(item=>item.classList.remove('active'));button.classList.add('active');const filter=button.dataset.filter;cards.forEach(card=>{const show=filter==='all'||card.dataset.tier===filter||card.dataset.activity===filter||(filter==='legacy'&&['slow','legacy'].includes(card.dataset.activity));card.classList.toggle('is-hidden',!show)})}));document.querySelector('.copy').addEventListener('click',async(event)=>{await navigator.clipboard.writeText(document.querySelector('.prompt').innerText);event.currentTarget.textContent='已复制';setTimeout(()=>event.currentTarget.textContent='复制 Prompt',1400)});
+</script></body></html>

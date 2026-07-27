@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>什么是好的IP版面画面｜视觉判断框架</title>
+  <style>
+    :root{
+      --ink:#171916;
+      --muted:#666b64;
+      --paper:#f4f1e9;
+      --white:#fff;
+      --line:#d8d5cb;
+      --green:#176b56;
+      --green-soft:#e3f0eb;
+      --red:#c7523e;
+      --red-soft:#f7e5e0;
+      --blue:#315f9d;
+      --blue-soft:#e5edf7;
+      --gold:#b98a24;
+      --gold-soft:#f4ecd7;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0}
+    img,video{display:block;max-width:100%}
+    a{color:inherit}
+    .hero{position:relative;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;background:#151714}
+    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.82) brightness(.52)}
+    .hero-shade{position:absolute;inset:0;background:rgba(8,10,8,.28)}
+    .hero-inner{position:relative;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:88px 0 72px;color:#fff}
+    .eyebrow{margin:0 0 18px;font-size:13px;font-weight:750;text-transform:uppercase}
+    h1{max-width:760px;margin:0;font-size:64px;line-height:1.03;font-weight:820;letter-spacing:0}
+    .hero-lead{max-width:760px;margin:24px 0 0;font-size:23px;line-height:1.65;color:rgba(255,255,255,.88)}
+    .hero-proof{display:flex;gap:8px;flex-wrap:wrap;margin-top:34px}
+    .hero-proof span{padding:8px 11px;border:1px solid rgba(255,255,255,.42);font-size:13px;background:rgba(20,22,19,.42)}
+    .wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
+    .band{padding:84px 0;border-top:1px solid var(--line)}
+    .band.white{background:var(--white)}
+    .band.dark{background:#191b18;color:#f7f7f3;border-color:#30332e}
+    .section-head{display:grid;grid-template-columns:180px minmax(0,760px);gap:26px;align-items:start;margin-bottom:42px}
+    .section-index{font-size:13px;font-weight:800;color:var(--green);text-transform:uppercase}
+    .dark .section-index{color:#8cc7b5}
+    h2{margin:0;font-size:38px;line-height:1.2;letter-spacing:0}
+    .section-head p{grid-column:2;margin:12px 0 0;color:var(--muted);font-size:17px;line-height:1.8}
+    .dark .section-head p{color:#bfc4bb}
+    .decision{display:grid;grid-template-columns:1.25fr repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+    .decision>div{padding:28px 22px;border-right:1px solid var(--line)}
+    .decision>div:last-child{border-right:0}
+    .decision .lead{font-size:25px;line-height:1.45;font-weight:760}
+    .decision b{display:block;margin-bottom:10px;color:var(--green);font-size:13px}
+    .decision p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
+    .formula{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .formula article{position:relative;min-height:180px;padding:26px 20px;border-right:1px solid var(--line)}
+    .formula article:last-child{border-right:0}
+    .formula span{font-size:12px;color:var(--green);font-weight:800}
+    .formula h3{margin:40px 0 8px;font-size:19px}
+    .formula p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
+    .formula-mark{margin:26px 0 0;font-size:23px;font-weight:800;text-align:center}
+    .anatomy{display:grid;grid-template-columns:minmax(320px,480px) 1fr;gap:58px;align-items:center}
+    .annotated{position:relative;width:min(100%,420px);margin:auto;background:#111;box-shadow:0 18px 42px rgba(38,32,20,.18)}
+    .annotated img{width:100%;aspect-ratio:9/16;object-fit:cover}
+    .eye-line{position:absolute;left:0;right:0;top:30.5%;border-top:1px dashed rgba(255,255,255,.88)}
+    .eye-line::after{content:"眼位线";position:absolute;right:8px;top:-22px;padding:3px 6px;background:rgba(16,18,16,.78);color:#fff;font-size:11px}
+    .subject-zone{position:absolute;left:23%;top:17%;width:56%;height:66%;border:2px solid #f2c14f;box-shadow:0 0 0 999px rgba(10,12,10,.06)}
+    .dot{position:absolute;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-size:13px;font-weight:800;border:3px solid #fff}
+    .d1{left:63%;top:25%}.d2{left:9%;top:45%}.d3{left:26%;top:75%}.d4{right:7%;top:61%}
+    .anatomy-list{display:grid;gap:0;border-top:2px solid var(--ink)}
+    .anatomy-row{display:grid;grid-template-columns:48px 155px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--line);align-items:start}
+    .anatomy-row i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-style:normal;font-size:13px;font-weight:800}
+    .anatomy-row strong{font-size:16px}
+    .anatomy-row p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+    .principle{margin-top:28px;padding:20px 24px;background:var(--green-soft);border-left:5px solid var(--green);font-size:18px;line-height:1.7;font-weight:720}
+    .types{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .type{background:#fff;border:1px solid #d7d4ca;border-radius:6px;overflow:hidden}
+    .type img{width:100%;aspect-ratio:9/12.8;object-fit:cover;object-position:top}
+    .type-copy{padding:20px}
+    .type-no{font-size:12px;color:var(--green);font-weight:800}
+    .type h3{margin:8px 0 11px;font-size:19px}
+    .type p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.65}
+    .type dl{margin:0;padding-top:12px;border-top:1px solid var(--line);font-size:13px}
+    .type dt{float:left;clear:left;width:64px;color:#888}
+    .type dd{margin-left:64px;margin-bottom:7px}
+    .sample-note{margin:18px 0 0;color:#747971;font-size:13px}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .video-item{border-top:1px solid #4a4e47;padding-top:16px}
+    .video-item video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;max-height:600px}
+    .video-item h3{margin:16px 0 6px;font-size:18px}
+    .video-item p{margin:0;color:#bfc4bb;font-size:14px;line-height:1.65}
+    .score-table{width:100%;border-collapse:collapse;background:#fff;border-top:2px solid var(--ink)}
+    .score-table th,.score-table td{padding:17px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+    .score-table th{font-size:12px;color:#666;background:#f0f2ed;text-transform:uppercase}
+    .score-table td{font-size:14px;line-height:1.55}
+    .score-table td:first-child{font-weight:760}
+    .score-table .points{font-size:20px;font-weight:820;color:var(--green);white-space:nowrap}
+    .levels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+    .level{padding:20px;border-radius:6px;border:1px solid var(--line);background:#fff}
+    .level b{display:block;font-size:24px;margin-bottom:6px}
+    .level span{font-size:13px;color:var(--muted)}
+    .level.best{background:var(--green-soft);border-color:#9fcabb}.level.best b{color:var(--green)}
+    .level.ok{background:var(--blue-soft);border-color:#b6c9df}.level.ok b{color:var(--blue)}
+    .level.warn{background:var(--gold-soft);border-color:#dfc98d}.level.warn b{color:#8c6717}
+    .level.bad{background:var(--red-soft);border-color:#e0b3a8}.level.bad b{color:var(--red)}
+    .veto{margin-top:24px;border-left:5px solid var(--red);padding:4px 0 4px 20px}
+    .veto strong{display:block;margin-bottom:8px;color:var(--red)}
+    .veto p{margin:0;color:var(--muted);line-height:1.75}
+    .compare{display:grid;grid-template-columns:140px 1fr 1fr;border-top:2px solid var(--ink)}
+    .compare>div{padding:19px 16px;border-bottom:1px solid var(--line)}
+    .compare .label{font-weight:760}
+    .compare .good{background:#eef7f3;color:#245a49}
+    .compare .risk{background:#fbefec;color:#8d3e30}
+    .closing{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end}
+    .closing h2{font-size:46px;line-height:1.15}
+    .closing blockquote{margin:0;padding:0 0 0 24px;border-left:5px solid var(--green);font-size:25px;line-height:1.6;font-weight:740}
+    footer{padding:30px 0 44px;color:#777c74;font-size:12px;border-top:1px solid var(--line)}
+    @media(max-width:900px){
+      .hero{min-height:560px}.hero-inner,.wrap{width:min(100% - 32px,1180px)}h1{font-size:46px}.hero-lead{font-size:19px}
+      .section-head{grid-template-columns:1fr}.section-head p{grid-column:1}.decision{grid-template-columns:1fr 1fr}.decision>div:nth-child(2){border-right:0}.decision>div{border-bottom:1px solid var(--line)}
+      .formula{grid-template-columns:1fr 1fr}.formula article{border-bottom:1px solid var(--line)}.formula article:nth-child(even){border-right:0}.formula article:last-child{grid-column:1/-1}
+      .anatomy{grid-template-columns:1fr}.types{grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr 1fr}.video-item:last-child{grid-column:1/-1}.levels{grid-template-columns:1fr 1fr}.closing{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .hero{min-height:520px}.hero>img{object-position:42% center}.hero-inner{padding-bottom:44px}h1{font-size:38px}.hero-lead{font-size:17px}.band{padding:58px 0}h2{font-size:29px}
+      .decision,.formula,.types,.video-grid,.levels{grid-template-columns:1fr}.decision>div,.formula article{border-right:0}.video-item:last-child{grid-column:auto}.anatomy-row{grid-template-columns:38px 1fr}.anatomy-row p{grid-column:2}.score-table{display:block;overflow-x:auto;white-space:normal}.compare{grid-template-columns:92px 1fr 1fr;font-size:13px}.closing h2{font-size:34px}.closing blockquote{font-size:20px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/hero.jpg" alt="四种人物IP画面样本">
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">PERSONAL IP VISUAL SYSTEM · EXECUTIVE BRIEF</p>
+      <h1>什么是好的<br>IP版面画面</h1>
+      <p class="hero-lead">不是把人放进一个漂亮房间，而是让画面在她开口之前，就已经说明：她是谁、为什么可信、她和观众是什么关系。</p>
+      <div class="hero-proof"><span>先不讨论标题</span><span>先不讨论字幕</span><span>先看人物与场景</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="band white">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">00 / 执行摘要</span>
+          <h2>优质画面的三项基础判断</h2>
+          <p>本节聚焦管理决策所需的核心问题：画面是否建立了与人物定位一致的信任。</p>
+        </div>
+        <div class="decision">
+          <div class="lead">好版面不是“漂亮”，而是<strong>人物、场景和信任感一致</strong>。</div>
+          <div><b>第一眼</b><p>先看到人物，而不是先看到家具、城市或摆件。</p></div>
+          <div><b>一秒钟</b><p>不听声音，也能感到她是权威、陪伴、理性或资源型人物。</p></div>
+          <div><b>三十条</b><p>不是偶然拍好一条，而是同一套母版可以长期稳定复制。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">01 / 核心公式</span>
+          <h2>五个因素必须同时成立</h2>
+          <p>五项因素构成乘法关系，任一项明显不足，均会降低整体视觉质量。</p>
+        </div>
+        <div class="formula">
+          <article><span>01</span><h3>人物可信</h3><p>状态、眼神、姿态和年龄感符合她真正的职业阶段。</p></article>
+          <article><span>02</span><h3>场景作证</h3><p>空间不是装饰，而是在证明她的身份、资源或关系感。</p></article>
+          <article><span>03</span><h3>构图聚焦</h3><p>脸是第一视觉锚点，眼位、比例和留白都有明确目的。</p></article>
+          <article><span>04</span><h3>光色统一</h3><p>肤色自然，人物与环境分离，颜色指向同一种人格。</p></article>
+          <article><span>05</span><h3>长期复制</h3><p>换选题、换服装后，仍然能保持同样的账号识别度。</p></article>
+        </div>
+        <p class="formula-mark">好版面 = 人物可信 × 场景作证 × 构图聚焦 × 光色统一 × 长期复制</p>
+      </div>
+    </section>
+
+    <section class="band white">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">02 / 一张图看懂</span>
+          <h2>一幅好画面，视线应该这样走</h2>
+          <p>先看到脸，再感知人物状态，最后才读到空间细节。场景越晚被看见，越说明主次关系处理得好。</p>
+        </div>
+        <div class="anatomy">
+          <div class="annotated">
+            <img src="assets/warm.jpg" alt="温暖人物访谈画面构图示意">
+            <div class="eye-line"></div><div class="subject-zone"></div>
+            <span class="dot d1">1</span><span class="dot d2">2</span><span class="dot d3">3</span><span class="dot d4">4</span>
+          </div>
+          <div>
+            <div class="anatomy-list">
+              <div class="anatomy-row"><i>1</i><strong>脸是锚点</strong><p>眼睛接近上三分线，人物亮度高于场景，第一眼自然落在表情。</p></div>
+              <div class="anatomy-row"><i>2</i><strong>场景有身份</strong><p>屏风、暖木与器物提供东方、成熟、克制的气质，但没有抢脸。</p></div>
+              <div class="anatomy-row"><i>3</i><strong>前景有层次</strong><p>桌面与器物形成前景，人物不贴墙，画面因此不再像直播间。</p></div>
+              <div class="anatomy-row"><i>4</i><strong>姿态有关系</strong><p>身体微侧、手势开放，既保持专业，又不会产生审讯式压迫感。</p></div>
+            </div>
+            <div class="principle">正确顺序：人物 ＞ 状态 ＞ 场景证据 ＞ 装饰细节。顺序反过来，就是“房间很好看，但人没有被记住”。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">03 / 四种好画面</span>
+          <h2>“好”不是一种审美，而是四种不同信任</h2>
+          <p>判断画面前必须先判断人物需要哪种信任。不能把高楼窗景、暖客厅和深色访谈混成一个统一答案。</p>
+        </div>
+        <div class="types">
+          <article class="type"><img src="assets/authority.jpg" alt="权威编辑型画面"><div class="type-copy"><span class="type-no">A / AUTHORITY</span><h3>权威编辑型</h3><p>观众感受：这个人有阅历、有判断、说话有分量。</p><dl><dt>构图</dt><dd>正中或轻偏侧</dd><dt>光线</dt><dd>侧光、明暗明确</dd><dt>风险</dt><dd>过暗会显压迫</dd></dl></div></article>
+          <article class="type"><img src="assets/warm.jpg" alt="温暖陪伴型画面"><div class="type-copy"><span class="type-no">B / WARMTH</span><h3>温暖陪伴型</h3><p>观众感受：她愿意听我说，也能陪我把问题想清楚。</p><dl><dt>构图</dt><dd>坐姿中景、微侧</dd><dt>光线</dt><dd>柔光、暖色层次</dd><dt>风险</dt><dd>太柔会失去专业</dd></dl></div></article>
+          <article class="type"><img src="assets/resource.jpg" alt="资源身份型画面"><div class="type-copy"><span class="type-no">C / STATUS</span><h3>资源身份型</h3><p>观众感受：她所在的城市、圈层与视野本身就是能力证据。</p><dl><dt>构图</dt><dd>人物与窗景共存</dd><dt>光线</dt><dd>窗光加面部补光</dd><dt>风险</dt><dd>景比人亮就会失焦</dd></dl></div></article>
+          <article class="type"><img src="assets/rational.jpg" alt="理性分析型画面"><div class="type-copy"><span class="type-no">D / CLARITY</span><h3>理性分析型</h3><p>观众感受：信息清楚、判断克制、没有多余表演。</p><dl><dt>构图</dt><dd>干净中近景</dd><dt>光线</dt><dd>中性高调柔光</dd><dt>风险</dt><dd>太平会像普通会议</dd></dl></div></article>
+        </div>
+        <p class="sample-note">说明：以上公开视频仅用于解释视觉类型，不代表最终对标账号名单，也不评价视频内容。</p>
+      </div>
+    </section>
+
+    <section class="band dark">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">04 / 动态验证</span>
+          <h2>静态好看还不够，人物一动也不能垮</h2>
+          <p>真正稳定的母版，在说话、转头和做手势时，眼位、人物比例、曝光和场景主次仍然保持稳定。</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-item"><video src="assets/warm-clip.mp4" poster="assets/warm.jpg" muted loop autoplay playsinline controls></video><h3>温暖型：动作不破坏秩序</h3><p>手势集中在身体中段，场景层次保持稳定，人物始终是第一视觉中心。</p></article>
+          <article class="video-item"><video src="assets/resource-clip.mp4" poster="assets/resource.jpg" muted loop autoplay playsinline controls></video><h3>资源型：景观不压过人物</h3><p>城市承担身份信息，但人物仍靠服装、轮廓和补光从窗景中分离出来。</p></article>
+          <article class="video-item"><video src="assets/authority-clip.mp4" poster="assets/authority.jpg" muted loop autoplay playsinline controls></video><h3>权威型：变化来自状态</h3><p>固定机位不等于呆板，节奏可以由眼神、停顿和克制手势完成。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band white">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">05 / 100分验收</span>
+          <h2>不用争论审美，按这张表决策</h2>
+          <p>先看匹配，再看摄影。即使光线漂亮，只要场景不符合人物定位，也不能进入正式母版。</p>
+        </div>
+        <table class="score-table">
+          <thead><tr><th>判断维度</th><th>分值</th><th>拿高分的画面</th><th>低分信号</th></tr></thead>
+          <tbody>
+            <tr><td>人物与IP匹配</td><td class="points">20</td><td>年龄感、职业阶段、可信方式一致</td><td>靠豪宅、正装或摆件硬造资历</td></tr>
+            <tr><td>人物视觉中心</td><td class="points">15</td><td>第一眼看脸，眼位和人物比例稳定</td><td>背景更亮、更复杂，人物沉入环境</td></tr>
+            <tr><td>构图与姿态</td><td class="points">15</td><td>肩线完整、留白有目的、动作不出框</td><td>头顶过空、手肘被切、机位像自拍</td></tr>
+            <tr><td>光线与肤色</td><td class="points">15</td><td>眼神光自然，脸有明暗，肤色真实</td><td>顶光眼窝黑、混合色温、过度磨皮</td></tr>
+            <tr><td>场景证据与层次</td><td class="points">15</td><td>一个主要身份线索，前中后景清楚</td><td>人物贴墙、摆件堆满、空间与身份无关</td></tr>
+            <tr><td>颜色与服装关系</td><td class="points">10</td><td>主色明确，人物和背景有亮度分离</td><td>衣服融入背景，颜色彼此争抢</td></tr>
+            <tr><td>动态稳定</td><td class="points">5</td><td>转头和手势后，曝光、对焦、构图不变</td><td>对焦跳动、反复推近、动作破坏画面</td></tr>
+            <tr><td>长期复制</td><td class="points">5</td><td>同机位可连续拍摄二三十条</td><td>一次性场地、成本太高或状态不可控</td></tr>
+          </tbody>
+        </table>
+        <div class="levels">
+          <div class="level best"><b>85–100</b><span>可进入标杆母版池</span></div>
+          <div class="level ok"><b>75–84</b><span>可用，修正局部问题</span></div>
+          <div class="level warn"><b>65–74</b><span>普通口播，缺少识别度</span></div>
+          <div class="level bad"><b>&lt;65</b><span>不建议继续投入制作</span></div>
+        </div>
+        <div class="veto"><strong>四项一票否决</strong><p>场景与人物定位冲突；脸部明显变形或肤色错误；背景抢过人物；这套画面无法稳定重复。</p></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">06 / 快速判断</span>
+          <h2>看画面时，不要问“贵不贵”，要问这些</h2>
+        </div>
+        <div class="compare">
+          <div class="label">观察点</div><div class="good"><strong>好的信号</strong></div><div class="risk"><strong>危险信号</strong></div>
+          <div class="label">人物</div><div class="good">脸和眼神先被看见</div><div class="risk">先看见窗景、柜子、灯或大摆件</div>
+          <div class="label">场景</div><div class="good">能说明身份，而且不过度表演</div><div class="risk">空间漂亮，但和人物没有关系</div>
+          <div class="label">光线</div><div class="good">脸有轮廓、眼睛有光、肤色自然</div><div class="risk">只有正面补光，人物像贴在墙上</div>
+          <div class="label">姿态</div><div class="good">稳定、松弛，与观众关系明确</div><div class="risk">缩肩、仰头、频繁大动作或明显摆拍</div>
+          <div class="label">复制</div><div class="good">换服装和选题后仍能成立</div><div class="risk">只适合这一条，下一条必须全部重做</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band white">
+      <div class="wrap closing">
+        <h2>最终只看一个结果：<br>画面有没有替人物建立正确的信任。</h2>
+        <blockquote>遮住文字、关闭声音，如果仍然看得出她是谁、为什么可信、她希望以什么距离和观众交流，这就是好的IP版面。</blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">视觉样本来源：已采集的公开账号公开视频帧，仅用于版面与构图研究。当前报告不构成最终对标名单；对标账号筛选将在视觉标准确定后单独进行。生成日期：2026-07-26。</div></footer>
+</body>
+</html>
