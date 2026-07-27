@@ -1,0 +1,100 @@
+{
+  "date": "2026-07-27",
+  "status": "completed_with_platform_api_degradation",
+  "method": {
+    "visible_results": 82,
+    "unique_creators": 65,
+    "profile_threshold_checks": 11,
+    "homepage_or_series_reviews": 6,
+    "dynamic_video_reviews": 1,
+    "formal_additions": 0,
+    "insurance_threshold": 300000,
+    "cross_industry_threshold": 500000,
+    "homepage_repetition_minimum": 3,
+    "visual_admission_score": 85
+  },
+  "search_groups": [
+    { "label": "保险顾问办公室", "visible_results": 18 },
+    { "label": "女性企业家访谈", "visible_results": 18 },
+    { "label": "商务人物纪录片", "visible_results": 9 },
+    { "label": "心理咨询访谈", "visible_results": 10 },
+    { "label": "财经生活场景", "visible_results": 9 },
+    { "label": "竖屏访谈", "visible_results": 9 },
+    { "label": "高端竖屏访谈", "visible_results": 9 }
+  ],
+  "reviewed_candidates": [
+    {
+      "name": "杨一面对面",
+      "followers": 1670000,
+      "category": "商业访谈个人IP",
+      "score": 83,
+      "status": "near_line",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAQn5pQ8_5G3_s9fpYHf8tTzC_iVdLNe4ssJ7erOyjLjk1YKkWg_uwbURNUzI6Of6P",
+      "evidence_video_url": "https://www.douyin.com/video/7598862907069320454",
+      "finding": "主页双人访谈母版稳定，真实视频为16:9横屏源，竖屏有效面积不足。"
+    },
+    {
+      "name": "卡尼酱",
+      "followers": 910000,
+      "category": "访谈主持人个人IP",
+      "score": 80,
+      "score_type": "static_pre_score",
+      "status": "observe",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAA0XQmSsl0065sfjXm7AAFgoHUNkdBjBMprQN4-E12rqY",
+      "finding": "双人访谈高频复现，人物关系清楚，但封面标题过重且生活内容混入。"
+    },
+    {
+      "name": "天爱Talk",
+      "followers": 800000,
+      "category": "财经投资个人IP",
+      "score": 78,
+      "score_type": "static_pre_score",
+      "status": "observe",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAALBQu0odP0MyyGWgDpnvBTsSLhorbHcYxES8uubAVDEitEw3liy-Ytsk6tr_JKgN9",
+      "finding": "杂志化封面系统统一，但版式依赖后期合成，真实拍摄场景证据不足。"
+    },
+    {
+      "name": "杨天真",
+      "followers": 4820000,
+      "category": "企业家个人IP",
+      "score": 77,
+      "score_type": "series_pre_score",
+      "status": "series_reference",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAB1lxLcDT1n51dY3jyB-VQACgN0gbYWGxvSdiE0DWYLY",
+      "finding": "单个访谈栏目具有稳定母版，但账号整体混合旅行、生活、口播与访谈。"
+    },
+    {
+      "name": "王艺妍妤Yanyu",
+      "followers": 1158000,
+      "category": "律师个人IP",
+      "score": 72,
+      "score_type": "static_pre_score",
+      "status": "reject",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAMv7luIU4bNrNOxNoZnd5VswxUrM8iV0jP0zVdb6LApP2f0-kJuhwLizDU6GEOnJe",
+      "finding": "单条演讲和顾问场景成立，但主页自拍、旅行和工作画面混杂。"
+    },
+    {
+      "name": "李惠心理",
+      "followers": 1291000,
+      "category": "心理专家个人IP",
+      "score": null,
+      "status": "recheck_required",
+      "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAaUyoqAnrwYQjZxtbQhFTx5XWD6f0NzyvEIlmUZBdHrs",
+      "finding": "搜索帧具备暖调专业场景，主页作品区持续加载失败，未以单帧代替稳定性判断。"
+    }
+  ],
+  "threshold_rejections": [
+    { "name": "Judy的100个朋友", "followers": 434000, "threshold": 500000 },
+    { "name": "凯莉彭", "followers": 433000, "threshold": 500000 },
+    { "name": "龚希望Hope", "followers": 91000, "threshold": 500000 },
+    { "name": "保险经纪人娜姐", "followers": 38000, "threshold": 300000 }
+  ],
+  "excluded_accounts": [
+    {
+      "name": "程前朋友圈",
+      "followers": 7348000,
+      "reason": "主页显示企业认证，按本项目个人IP非公司账号规则排除正式样本。"
+    }
+  ],
+  "platform_note": "YuanFlow抖音结构化接口当日持续返回平台侧HTTP 502，已使用登录状态下的抖音公开页面完成可见样本、粉丝量级、主页与动态核验；接口恢复后补采结构化快照。"
+}
