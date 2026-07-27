@@ -79,6 +79,28 @@
     .day b{font-size:12px}
     .day span{font-size:10px;color:var(--muted)}
     .scope-note{margin-top:18px;padding:17px 19px;background:var(--navy-soft);border-left:4px solid var(--navy);font-size:13px;line-height:1.8;color:#344957}
+    .benchmark-note{margin-bottom:22px;padding:18px 20px;background:var(--gold-soft);border-left:4px solid var(--gold);font-size:13px;line-height:1.8;color:#604b2c}
+    .benchmark-list{border-top:1px solid var(--line)}
+    .benchmark{display:grid;grid-template-columns:210px 360px minmax(0,1fr);gap:26px;padding:30px 0;border-bottom:1px solid var(--line)}
+    .benchmark-person{padding-top:4px}
+    .benchmark-person h3{margin:9px 0 7px;font-family:Georgia,"Songti SC","STSong",serif;font-size:28px}
+    .benchmark-person p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+    .source-state{display:inline-block;padding:5px 8px;background:var(--green-soft);color:var(--green);font-size:10px;font-weight:900}
+    .source-state.inferred{background:var(--navy-soft);color:var(--navy)}
+    .source-state.missing{background:var(--red-soft);color:var(--red)}
+    .reference-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-content:start}
+    .reference-media.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .reference-media figure{margin:0;background:var(--white);border:1px solid var(--line)}
+    .reference-media img{width:100%;aspect-ratio:1/1.18;object-fit:cover;object-position:top}
+    .reference-media .wide img{object-fit:cover;object-position:center}
+    .reference-media figcaption{padding:9px 10px;font-size:10px;line-height:1.45;color:var(--muted)}
+    .reference-media figcaption a{text-decoration:none;font-weight:800;color:var(--navy)}
+    .benchmark-copy{display:grid;gap:13px;align-content:start}
+    .benchmark-copy div{padding-bottom:12px;border-bottom:1px solid var(--line)}
+    .benchmark-copy div:last-child{border-bottom:0}
+    .benchmark-copy b{display:block;margin-bottom:4px;font-size:12px}
+    .benchmark-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}
+    .benchmark-copy .gap p{color:#7a3d34}
     .evidence-list{display:grid;gap:32px}
     .evidence{display:grid;grid-template-columns:minmax(0,1.34fr) minmax(280px,.66fr);gap:0;background:var(--white);border:1px solid var(--line)}
     .evidence figure{margin:0;background:#161816}
@@ -114,6 +136,7 @@
       .decision{border-right:0;border-bottom:1px solid var(--line)}
       .decision:last-child{border-bottom:0}
       .action-grid{grid-template-columns:repeat(2,1fr)}
+      .benchmark{grid-template-columns:180px minmax(280px,.8fr) 1fr}
       .evidence-copy{min-height:360px}
     }
     @media(max-width:620px){
@@ -124,6 +147,7 @@
       .metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}
       .section{padding-top:52px}.section-head{grid-template-columns:1fr;gap:7px}.section-head{margin-bottom:20px}h2{font-size:27px}
       .layer-grid,.action-grid{grid-template-columns:1fr}
+      .benchmark{grid-template-columns:1fr;gap:17px;padding:26px 0}.reference-media.three{grid-template-columns:repeat(3,minmax(0,1fr))}.reference-media figcaption{font-size:9px}
       .days{gap:5px;height:150px}.day b{font-size:10px}.day span{font-size:9px}
       .panel{padding:21px 16px}.status-row{grid-template-columns:72px minmax(0,1fr) 28px;gap:8px}
       .evidence-copy{min-height:0;padding:23px}.evidence h3{font-size:24px}.evidence-tag{margin-top:4px}
@@ -222,9 +246,85 @@
       <div class="scope-note"><strong>口径提醒：</strong>状态统计回答“任务推进到哪里”，成片统计回答“实际用了什么画面”。本周需要把所有完成项的成片附件补齐，下一次复盘才能同时判断产能、发布和视觉效果。</div>
     </section>
 
+    <section class="section" id="benchmarks">
+      <div class="section-head">
+        <div class="section-no">04 / 对标来源</div>
+        <div><h2>不是笼统“抄风格”，而是拆不同账号的不同模块</h2><p class="section-desc">本周需要同时看三件事：原本打算对标谁、具体借哪一层、最后的成片有没有落到这条路线上。一个内部IP可以组合多个对标，但每个对标必须有明确分工。</p></div>
+      </div>
+      <div class="benchmark-note"><strong>证据状态：</strong>释磊的对标由项目要求确认；其余4位根据本周成片与现有标杆样本库反推。反推关系可以用于复盘，但在下一次拍摄前仍应由项目组确认，不能把视觉相似自动当成最初的创作来源。</div>
+      <div class="benchmark-list">
+        <article class="benchmark">
+          <div class="benchmark-person"><span class="source-state">项目已确认</span><h3>释磊</h3><p>专业解释型 + 观点脱口秀</p></div>
+          <div class="reference-media three">
+            <figure><img src="evidence/benchmarks/wei-yi-lao-zhou-stage.jpg" alt="微易老周舞台脱口秀"><figcaption><a href="../../elite-8/report.html#wei-yi-lao-zhou">微易老周</a><br>舞台脱口秀</figcaption></figure>
+            <figure><img src="evidence/benchmarks/wei-yi-lao-zhou-sit.jpg" alt="微易老周室内坐谈"><figcaption><a href="../../elite-8/report.html#wei-yi-lao-zhou">微易老周</a><br>室内坐谈</figcaption></figure>
+            <figure class="wide"><img src="evidence/benchmarks/horizontal-interview-yangyi.png" alt="横版专家访谈类参考"><figcaption><a href="../../daily-visual-monitor/2026-07-27/report.html#near-line">横版专家IP</a><br>杨一面对面为代表</figcaption></figure>
+          </div>
+          <div class="benchmark-copy">
+            <div><b>抄谁、抄什么</b><p>从微易老周借“两条内容通道”：坐谈负责解释，舞台负责观点与势能；从横版财经/专家访谈类IP借黑金信息页、横向人物窗口和专业资料包装。</p></div>
+            <div><b>本周实际落地</b><p>3条黑金桌前近景 + 1条暖光椅坐中景。口播解释与横版信息包装已经出现。</p></div>
+            <div class="gap"><b>当前偏差</b><p>脱口秀和舞台表达尚未落地，现阶段更像“专业口播+信息卡”，还没有形成微易老周式的表演性双母版。</p></div>
+          </div>
+        </article>
+
+        <article class="benchmark">
+          <div class="benchmark-person"><span class="source-state inferred">按成片反推</span><h3>芊含</h3><p>高净值财富传承主理人</p></div>
+          <div class="reference-media three">
+            <figure><img src="evidence/benchmarks/wei-yi-lao-zhou-stage.jpg" alt="微易老周舞台权威感"><figcaption><a href="../../elite-8/report.html#wei-yi-lao-zhou">微易老周</a><br>舞台势能</figcaption></figure>
+            <figure><img src="evidence/benchmarks/gang-quan-lina-bright.jpg" alt="港圈Lina姐明亮专业女性画面"><figcaption><a href="../../elite-8/report.html#gang-quan-lina">港圈Lina姐</a><br>高净值女性身份</figcaption></figure>
+            <figure><img src="evidence/benchmarks/zhi-ning-shuo-warm.jpg" alt="芷柠说暖色室内访谈"><figcaption><a href="../../elite-8/report.html#zhi-ning-shuo">芷柠说</a><br>暖色私享访谈</figcaption></figure>
+          </div>
+          <div class="benchmark-copy">
+            <div><b>建议定义的风格</b><p>“舞台权威 + 私享会解释”的高净值女性主理人。舞台建立经历和势能，暖调室内承接细致解释与信任。</p></div>
+            <div><b>本周实际落地</b><p>2条舞台站播、2条舞台坐播、1条暖调客厅、1条暖调桌前。是5位IP中最接近双通道完整落地的一位。</p></div>
+            <div class="gap"><b>当前偏差</b><p>舞台素材占比高，但“高净值女性”的精致身份主要靠白色套装支撑；室内固定母版和专属场景资产还不够稳定。</p></div>
+          </div>
+        </article>
+
+        <article class="benchmark">
+          <div class="benchmark-person"><span class="source-state inferred">按成片反推</span><h3>芳芳</h3><p>生活型保险顾问</p></div>
+          <div class="reference-media">
+            <figure><img src="evidence/benchmarks/huang-jia-xiang-car.jpg" alt="年金一哥黄嘉祥车内口播"><figcaption><a href="../../elite-8/report.html#huang-jia-xiang">年金一哥｜黄嘉祥</a><br>车内自然光近景</figcaption></figure>
+            <figure><img src="evidence/benchmarks/chen-jiayi-warm.jpg" alt="有毒有料陈葭怡暖色家居口播"><figcaption><a href="../../elite-8/report.html#chen-jiayi">有毒有料陈葭怡</a><br>暖色家居口播</figcaption></figure>
+          </div>
+          <div class="benchmark-copy">
+            <div><b>抄谁、抄什么</b><p>从黄嘉祥借车内自然光与随手交流感；从陈葭怡借生活空间中的稳定近景、固定标题区与更亲近的表达距离。</p></div>
+            <div><b>本周实际落地</b><p>2条车内口播 + 2条室内桌前近景，已经形成“通勤现场 + 居家解释”两套生活化母版。</p></div>
+            <div class="gap"><b>当前偏差</b><p>两套都属于近景，生活感成立但职业空间不足；下一步需要一套中景行动画面证明顾问身份。</p></div>
+          </div>
+        </article>
+
+        <article class="benchmark">
+          <div class="benchmark-person"><span class="source-state missing">账号待确认</span><h3>荷花</h3><p>陪伴型养老／健康顾问</p></div>
+          <div class="reference-media">
+            <figure><img src="evidence/benchmarks/gang-quan-lina-bright.jpg" alt="港圈Lina姐明亮人物与景观背景"><figcaption><a href="../../elite-8/report.html#gang-quan-lina">港圈Lina姐</a><br>明亮女性顾问气质</figcaption></figure>
+            <figure><img src="evidence/hehua-contact-sheet.jpg" alt="荷花湖景户外坐播"><figcaption>本周落地<br>湖景户外生活方式</figcaption></figure>
+          </div>
+          <div class="benchmark-copy">
+            <div><b>目前能确认的借鉴层</b><p>明亮柔光、自然景深、端正坐姿和女性顾问的亲和感成立；湖景本身承担“陪伴、松弛、长期主义”的情绪。</p></div>
+            <div><b>本周实际落地</b><p>5条全部使用湖景户外坐播，部分加入全屏B-roll。生产稳定，但仍是一套场景反复使用。</p></div>
+            <div class="gap"><b>当前缺口</b><p>现有资料无法把湖景场景严谨对应到一个明确账号级对标。需要补充最初参考链接，否则只能记为“户外生活方式类场景借鉴”。</p></div>
+          </div>
+        </article>
+
+        <article class="benchmark">
+          <div class="benchmark-person"><span class="source-state inferred">部分反推</span><h3>迎春</h3><p>理性决策型保险顾问</p></div>
+          <div class="reference-media">
+            <figure><img src="evidence/benchmarks/dong-ke-ren-card.jpg" alt="董可人明亮信息型口播"><figcaption><a href="../../elite-8/report.html#dong-ke-ren">董可人</a><br>明亮信息型口播</figcaption></figure>
+            <figure><img src="evidence/benchmarks/gang-quan-lina-bright.jpg" alt="港圈Lina姐明亮专业女性画面"><figcaption><a href="../../elite-8/report.html#gang-quan-lina">港圈Lina姐</a><br>职业女性与景观身份</figcaption></figure>
+          </div>
+          <div class="benchmark-copy">
+            <div><b>建议定义的风格</b><p>从董可人借稳定居中、重点词与信息解释效率；从港圈Lina借明亮专业女性气质。人物应比荷花更偏理性判断与方案决策。</p></div>
+            <div><b>本周实际落地</b><p>3条湖景户外坐播，白色西装强化了职业感，但构图与荷花共用同一母版。</p></div>
+            <div class="gap"><b>当前偏差</b><p>目标是理性顾问，落地却仍是陪伴型湖景。下一套应转向办公室或桌侧顾问构图，才能真正与荷花分开。</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="evidence">
       <div class="section-head">
-        <div class="section-no">04 / 图像证据</div>
+        <div class="section-no">05 / 图像证据</div>
         <div><h2>5位IP的成片抽帧，直接看复用与差异</h2><p class="section-desc">每张长图按视频逐行排列，同一行展示同一条视频的多个时间点。这样可以识别真实构图是否稳定，而不是只看一张封面。</p></div>
       </div>
       <div class="evidence-list">
@@ -277,7 +377,7 @@
 
     <section class="section" id="layers">
       <div class="section-head">
-        <div class="section-no">05 / 两层管理</div>
+        <div class="section-no">06 / 两层管理</div>
         <div><h2>先管画面母版，再管包装变体</h2><p class="section-desc">上周不少“变化”来自剪辑包装。它们有价值，但不能替代场景、人物位置和光线系统的建设。</p></div>
       </div>
       <div class="layer-grid">
@@ -288,7 +388,7 @@
 
     <section class="section" id="actions">
       <div class="section-head">
-        <div class="section-no">06 / 下周动作</div>
+        <div class="section-no">07 / 下周动作</div>
         <div><h2>不追求更多场景，先补四套有明确人物归属的母版</h2><p class="section-desc">每套新母版至少连续测试2条，才能判断是否可复用。一次性的精修画面不进入母版池。</p></div>
       </div>
       <div class="action-grid">
